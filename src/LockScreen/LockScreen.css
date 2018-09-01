@@ -1,0 +1,23 @@
+.outer {
+  width: 100%;
+  text-align: center;
+}
+
+.inner {
+  display: inline-block;
+}
+
+.box {
+    display: flex;
+    flex-wrap: wrap; /* Optional. only if you want the items to wrap */
+    justify-content: center; /* For horizontal alignment */
+    align-items: center; /* For vertical alignment */
+}
+
+.Lock-container {
+  position: absolute;
+  right: 0;
+  left: 0;
+  height: 100%;
+  box-shadow: rgb(108, 108, 108) 0px 4px 10px;
+}
