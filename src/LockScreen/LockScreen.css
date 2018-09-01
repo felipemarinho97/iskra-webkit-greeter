@@ -15,9 +15,11 @@
 }
 
 .Lock-container {
+  z-index: 20;
   position: absolute;
   right: 0;
   left: 0;
   height: 100%;
   box-shadow: rgb(108, 108, 108) 0px 4px 10px;
+  transition: transform 0.15s;
 }

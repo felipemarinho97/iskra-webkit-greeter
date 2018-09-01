@@ -11,7 +11,9 @@ class LockScreen extends Component {
       timeFormat: 'h:mm:ss',
       date: '',
       dateFormat: 'dddd, MMMM Do YYYY',
-      fontSize: '5'
+      fontSize: '5',
+      clickXlocation: this.props.vpHeight,
+      release: false
     };
   }
 
@@ -27,9 +29,58 @@ class LockScreen extends Component {
     }, 1000);
   }
 
+  componentWillReceiveProps() {
+    this.setState({ release: this.getRelease() });
+  }
+
+  getMousePercentage(clickY) {
+    let total = this.state.clickXlocation;
+    if (this.isMousePressed())
+      total = this.props.vpHeight;
+    let percentage = parseInt((100 * this.props.y)/ total);
+    if (percentage > 100)
+      percentage = 100;
+
+    return percentage;
+  }
+
+  getTransformPercentage() {
+    let mousePercentage = 100-this.getMousePercentage();
+    if (this.isMousePressed())
+        return 0;
+    else if (this.state.release)
+        return 100;
+
+    return mousePercentage;
+  }
+
+  isMousePressed() {
+    return Number.isNaN(this.state.clickXlocation);
+  }
+
+  getRelease() {
+    if (this.getTransformPercentage() > 50)
+      return true;
+    else {
+      return false;
+    }
+  }
+
+  _onMouseDown(event) {
+    this.setState({ clickXlocation: event.screenY });
+  }
+
+  _onMouseUp(event) {
+    this.setState({ clickXlocation: NaN });
+  }
+
   render () {
     return (
-      <div style={{ backgroundImage: `url("${background}")` }} className="box Lock-container">
+      <div
+        onMouseDown={this._onMouseDown.bind(this)}
+        onMouseUp={this._onMouseUp.bind(this)}
+        style={{ backgroundImage: `url("${background}")`, transform: `translateY(-${this.getTransformPercentage()}%)` }}
+        className="box Lock-container">
         <div className="">
           <span style={{fontSize: this.state.fontSize + 'rem', color: 'white', textShadow: '2px 2px 2px #474747'}}>
             {this.state.time}
