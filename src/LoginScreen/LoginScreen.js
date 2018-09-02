@@ -17,10 +17,12 @@ class LoginScreen extends Component {
   }
 
   handleChangeUser(event) {
-    console.log(event.target.value);
-    if (event.key === "Enter")
+    if (event.key === "Enter") {
       this.setState({ showPassForm: true });
-    this.setState({ username: this.state.username + event.key });
+      let ret = window.lightdm.start_authentication(this.state.username);
+      console.log(ret);
+    }
+    this.setState({ username: event.target.value });
 
   }
 
@@ -36,20 +38,30 @@ class LoginScreen extends Component {
       <div
         style={{ backgroundImage: `url(${background})`, backgroundSize: 'cover' }}
         className="LoginScreen-container box blur-bgimage">
+        <div
+          className="status-bar">
+          arcan-PC
+        </div>
         <Form onSubmit={this.handleSubmit} className="login-form">
           <Avatar
             style={{margin: '1rem'}}
             size={96}
-            icon="user" />
+            icon={this.state.username ? undefined : "user"}>{this.state.username.toUpperCase()[0]}</Avatar>
           <Form.Item>
               {this.state.showPassForm ? (
-              <Input onKeyPress={this.handleChangePass.bind(this)}
+              <Input
+                className="login-input"
+                onChange={this.handleChangePass.bind(this)}
+                onKeyPress={this.handleChangePass.bind(this)}
                 prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}
                 placeholder="Senha" type="password" value={this.state.password} />) :
                 (
-                  <Input onKeyPress={this.handleChangeUser.bind(this)}
+                  <Input
+                    className="login-input"
+                    onChange={this.handleChangeUser.bind(this)}
+                    onKeyPress={this.handleChangeUser.bind(this)}
                     prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
-                    placeholder="Usuário" value={this.state.username}/>
+                    placeholder="Usuário" type="text" value={this.state.username}/>
                 )
               }
           </Form.Item>

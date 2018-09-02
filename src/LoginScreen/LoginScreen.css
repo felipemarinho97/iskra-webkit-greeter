@@ -5,7 +5,7 @@
   left: 0;
   height: 100%;
   background-color: #8f3b3b;
-  
+
 }
 
 .box {
@@ -13,4 +13,31 @@
     flex-wrap: wrap; /* Optional. only if you want the items to wrap */
     justify-content: center; /* For horizontal alignment */
     align-items: center; /* For vertical alignment */
+}
+
+.login-input {
+  opacity: 0.8;
+  box-shadow: #0000004d 0px 0px 30px;
+}
+
+.login-form {
+  transition: all 1s linear;
+  background-color: #0003;
+  padding: 3rem;
+  border-radius: 4px;
+}
+
+.status-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 22px;
+  background-color: #0003;
+  color: #ffffffe6;
+  display: flex;
+  padding: 3px 10px 3px 10px;
+  box-shadow: #0000004d 0px 2px 1px;
+  font-size: 12px
 }

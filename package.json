@@ -1,5 +1,6 @@
 {
   "name": "iskra-webkit-greeter",
+  "homepage": "https://felipemarinho97.github.io/iskra-webkit-greeter/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

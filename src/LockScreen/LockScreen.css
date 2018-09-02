@@ -22,6 +22,7 @@
   height: 100%;
   box-shadow: rgba(0, 0, 0, 0.67) 0px 4px 10px;
   transition: transform 0.15s;
+  background-color: rgb(66, 66, 66);
 }
 
 .blur-bgimage {
@@ -46,4 +47,5 @@
     -moz-transition   : all 2s linear;
     -webkit-transition: all 2s linear;
     -o-transition     : all 2s linear;
+    transform: scale(1.1);
 }
