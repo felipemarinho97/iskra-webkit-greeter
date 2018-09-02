@@ -25,6 +25,7 @@
 .App-container {
   top: 0;
   bottom: 0;
+  -webkit-user-select: none;
 }
 
 @keyframes App-logo-spin {
