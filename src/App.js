@@ -1,8 +1,20 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
+import mock from './js/mock2'
 import LockScreen from './LockScreen/LockScreen';
 import LoginScreen from './LoginScreen/LoginScreen';
 import './App.css';
+
+const WALLPAPERS_DIR = "/usr/share/lightdm-webkit/themes/iskra-webkit-greeter/src/img/wallpapers"
+const WALLPAPERS_LIST = window.theme_utils.dirlist(WALLPAPERS_DIR);
+const WALLPAPER_INDEX = getRandomArbitrary(0, WALLPAPERS_LIST.length)
+function getRandomArbitrary(min, max) {
+  return parseInt(Math.random() * (max - min) + min);
+}
+
+function getRandomWallpaper() {
+  return WALLPAPERS_LIST[WALLPAPER_INDEX]
+}
 
 class App extends Component {
   constructor(props) {
@@ -35,8 +47,8 @@ class App extends Component {
   render() {
     return (
       <div  onMouseMove={this._onMouseMove.bind(this)} className="App App-container">
-        <LockScreen y={this.state.y} vpHeight={this.state.height}/>
-        <LoginScreen />
+        <LockScreen getWallpaper={getRandomWallpaper} y={this.state.y} vpHeight={this.state.height}/>
+        <LoginScreen getWallpaper={getRandomWallpaper} />
       </div>
     );
   }

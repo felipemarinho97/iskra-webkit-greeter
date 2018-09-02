@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import './LockScreen.css';
 import * as moment from 'moment';
-// import background from '../img/wallpapers/adwaita-day.jpg';
-import background from '../img/wallpapers/ColdWarm.jpg';
+import background from '../img/wallpapers/adwaita-day.jpg';
+// import background from '/usr/share/backgrounds/gnome/ColdWarm.jpg';
 
 class LockScreen extends Component {
   constructor(props) {
     super(props);
     this.state = {
       time: '',
-      timeFormat: 'h:mm:ss',
+      timeFormat: 'HH:mm:ss',
       date: '',
       dateFormat: 'dddd, MMMM Do YYYY',
       fontSize: '5',
@@ -75,12 +75,17 @@ class LockScreen extends Component {
     this.setState({ clickXlocation: NaN });
   }
 
+  _onScroll(event) {
+    console.log(event.deltaY, event.deltaX, event.deltaZ, event.deltaMode);
+  }
+
   render () {
     return (
       <div
         onMouseDown={this._onMouseDown.bind(this)}
         onMouseUp={this._onMouseUp.bind(this)}
-        style={{ backgroundImage: `url("${background}")`,
+        onWheel={this._onScroll.bind(this)}
+        style={{ backgroundImage: `url(${background}), url("${this.props.getWallpaper()}")`,
                  transform: `translateY(-${this.getTransformPercentage()}%)`,
                  backgroundSize: 'cover'}}
         className="box Lock-container">

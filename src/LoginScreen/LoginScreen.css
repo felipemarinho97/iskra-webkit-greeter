@@ -37,7 +37,33 @@
   background-color: #0003;
   color: #ffffffe6;
   display: flex;
-  padding: 3px 10px 3px 10px;
+  padding: 0px 10px 0px 10px;
   box-shadow: #0000004d 0px 2px 1px;
-  font-size: 12px
+  font-size: 12px;
+  display: flex;
+}
+
+.font-white {
+  color: #ffffffe6 !important;
+}
+
+.menu-p {
+  padding: 3px 8px;
+}
+
+.status-bar-item-2 {
+  flex-grow: 2
+}
+.status-bar-item-1 {
+  flex-grow: 1
+}
+
+.power-dropdown {
+  display: inline-block;
+  transition: 0.3s;
+
+}
+
+.power-dropdown:hover, .power-dropdown:active {
+  background-color: #0003;
 }

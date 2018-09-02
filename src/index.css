@@ -3,3 +3,8 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+@font-face {
+  font-family:anticon;
+  font-display:fallback;
+  src:url("/usr/share/lightdm-webkit/themes/iskra-webkit-greeter/src/font/font_148784_v4ggb6wrjmkotj4i.woff") format("woff")}
