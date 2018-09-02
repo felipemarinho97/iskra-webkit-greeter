@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './LockScreen.css';
 import * as moment from 'moment';
-import background from '../img/wallpapers/adwaita-day.jpg';
+// import background from '../img/wallpapers/adwaita-day.jpg';
+import background from '../img/wallpapers/ColdWarm.jpg';
 
 class LockScreen extends Component {
   constructor(props) {
@@ -49,7 +50,7 @@ class LockScreen extends Component {
     if (this.isMousePressed())
         return 0;
     else if (this.state.release)
-        return 100;
+        return 110;
 
     return mousePercentage;
   }
@@ -79,7 +80,9 @@ class LockScreen extends Component {
       <div
         onMouseDown={this._onMouseDown.bind(this)}
         onMouseUp={this._onMouseUp.bind(this)}
-        style={{ backgroundImage: `url("${background}")`, transform: `translateY(-${this.getTransformPercentage()}%)` }}
+        style={{ backgroundImage: `url("${background}")`,
+                 transform: `translateY(-${this.getTransformPercentage()}%)`,
+                 backgroundSize: 'cover'}}
         className="box Lock-container">
         <div className="">
           <span style={{fontSize: this.state.fontSize + 'rem', color: 'white', textShadow: '2px 2px 2px #474747'}}>
