@@ -21,7 +21,7 @@ class App extends Component {
     super(props);
 
     this.state = {
-      x: 0, y: 0, width: 0, height: 0
+      x: 0, y: 0, width: 0, height: 0, lkInt: {}
     };
 
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
@@ -47,8 +47,8 @@ class App extends Component {
   render() {
     return (
       <div  onMouseMove={this._onMouseMove.bind(this)} className="App App-container">
-        <LockScreen getWallpaper={getRandomWallpaper} y={this.state.y} vpHeight={this.state.height}/>
-        <LoginScreen getWallpaper={getRandomWallpaper} />
+        <LockScreen lkInt={this.state.lkInt} getWallpaper={getRandomWallpaper} y={this.state.y} vpHeight={this.state.height}/>
+        <LoginScreen lock={() => this.state.lkInt.setRelease(false)} getWallpaper={getRandomWallpaper} />
       </div>
     );
   }
