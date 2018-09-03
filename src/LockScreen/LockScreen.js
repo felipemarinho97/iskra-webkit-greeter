@@ -4,6 +4,9 @@ import * as moment from 'moment';
 import background from '../img/wallpapers/adwaita-day.jpg';
 // import background from '/usr/share/backgrounds/gnome/ColdWarm.jpg';
 
+if (window.moment === 'undefined')
+  window.moment = moment
+
 class LockScreen extends Component {
   constructor(props) {
     super(props);
@@ -19,19 +22,20 @@ class LockScreen extends Component {
   }
 
   componentWillMount() {
-    this.setState({ time: moment().format(this.state.timeFormat),
-                    date: moment().format(this.state.dateFormat),});
+    this.setState({ time: window.moment().format(this.state.timeFormat),
+                    date: window.moment().format(this.state.dateFormat),});
   }
 
   componentDidMount() {
     setInterval(() => {
-      this.setState({ time: moment().format(this.state.timeFormat),
-                      date: moment().format(this.state.dateFormat),});
+      this.setState({ time: window.moment().format(this.state.timeFormat),
+                      date: window.moment().format(this.state.dateFormat),});
     }, 1000);
   }
 
   componentWillReceiveProps() {
     this.setState({ release: this.getRelease() });
+    this.props.lkInt.setRelease = this.setRelease.bind(this)
   }
 
   getMousePercentage(clickY) {
@@ -65,6 +69,11 @@ class LockScreen extends Component {
     else {
       return false;
     }
+  }
+
+  setRelease(release) {
+    this.setState({ release })
+    this._onMouseUp()
   }
 
   _onMouseDown(event) {

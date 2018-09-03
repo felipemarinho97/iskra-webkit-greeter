@@ -113,7 +113,7 @@ class LoginScreen extends Component {
         </Menu.Item>) : ""}
 
         <Menu.Divider />
-        <Menu.Item key="4"><Icon type="lock" /> Bloquear</Menu.Item>
+        <Menu.Item key="4"><a href="#" onClick={this.props.lock}><Icon type="lock" /> Bloquear</a></Menu.Item>
       </Menu>
     )
 
