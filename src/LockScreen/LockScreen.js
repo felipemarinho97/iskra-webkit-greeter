@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 import './LockScreen.css';
 import * as moment from 'moment';
 import background from '../img/wallpapers/adwaita-day.jpg';
-// import background from '/usr/share/backgrounds/gnome/ColdWarm.jpg';
 
-if (window.moment === 'undefined')
+if (window.moment === undefined)
   window.moment = moment
 
 class LockScreen extends Component {
