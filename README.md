@@ -1,8 +1,11 @@
 # Iskra
-###### ( iskra-webkit-greeter )
+###### ( iskra-webkit-greeter ) 
+
 <p align="center">
   <img src="https://cdn.iconscout.com/icon/free/png-128/fire-flame-tool-light-spark-33937.png">
 </p>
+
+[![Build Status](https://travis-ci.org/felipemarinho97/iskra-webkit-greeter.svg?branch=master)](https://travis-ci.org/felipemarinho97/iskra-webkit-greeter)
 
 A beautiful, awesome themed login screen written on lightdm and the lightdm-webkit2-greeter.
 
