@@ -1,5 +1,5 @@
 # Iskra
-###### ( iskra-webkit-greeter ) 
+###### ( lightdm-webkit-theme-iskra ) 
 
 <p align="center">
   <img src="https://cdn.iconscout.com/icon/free/png-128/fire-flame-tool-light-spark-33937.png">
@@ -15,6 +15,7 @@ Iskra, (from russian: И́скра, translated: spark) was the name of a politic
 
 ![](iskra.gif)
 
+### Iskra LightDM Webkit2 Theme
 ## Features
 
 - A beautiful Lockscreen slider
