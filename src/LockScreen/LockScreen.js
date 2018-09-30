@@ -26,6 +26,7 @@ class LockScreen extends Component {
   }
 
   componentDidMount() {
+    this.focusLockScreen()
     setInterval(() => {
       this.setState({ time: window.moment().format(this.state.timeFormat),
                       date: window.moment().format(this.state.dateFormat),});
@@ -35,6 +36,11 @@ class LockScreen extends Component {
   componentWillReceiveProps() {
     this.setState({ release: this.getRelease() });
     this.props.lkInt.setRelease = this.setRelease.bind(this)
+  }
+
+  focusLockScreen() {
+    if (this.lockScreen)
+      this.lockScreen.focus()
   }
 
   getMousePercentage(clickY) {
@@ -63,16 +69,19 @@ class LockScreen extends Component {
   }
 
   getRelease() {
-    if (this.getTransformPercentage() > 50)
+    if (this.getTransformPercentage() > 50) {
       return true;
-    else {
+    } else {
       return false;
     }
   }
 
   setRelease(release) {
     this.setState({ release })
+    console.log(`LockScreen: Release set to ${release}`)
     this._onMouseUp()
+    if (!release)
+      this.focusLockScreen()
   }
 
   _onMouseDown(event) {
@@ -87,9 +96,23 @@ class LockScreen extends Component {
     console.log(event.deltaY, event.deltaX, event.deltaZ, event.deltaMode);
   }
 
+  _handleKeyPress(event) {
+    switch (event.keyCode) {
+      case 13:
+      case 32:
+        this.setRelease(true)
+        // Don't know why, but this is necessary to the release works.
+        this.setState({ clickXlocation: 0 })
+        break;
+    }
+  }
+
   render () {
     return (
       <div
+        tabIndex="0"
+        onKeyDown={this._handleKeyPress.bind(this)}
+        ref={lockScreen => { this.lockScreen = lockScreen }}
         onMouseDown={this._onMouseDown.bind(this)}
         onMouseUp={this._onMouseUp.bind(this)}
         onWheel={this._onScroll.bind(this)}
