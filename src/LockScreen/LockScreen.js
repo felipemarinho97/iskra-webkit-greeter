@@ -26,6 +26,7 @@ class LockScreen extends Component {
   }
 
   componentDidMount() {
+    this.focusLockScreen()
     setInterval(() => {
       this.setState({ time: window.moment().format(this.state.timeFormat),
                       date: window.moment().format(this.state.dateFormat),});
@@ -35,6 +36,11 @@ class LockScreen extends Component {
   componentWillReceiveProps() {
     this.setState({ release: this.getRelease() });
     this.props.lkInt.setRelease = this.setRelease.bind(this)
+  }
+
+  focusLockScreen() {
+    if (this.lockScreen)
+      this.lockScreen.focus()
   }
 
   getMousePercentage(clickY) {
@@ -74,6 +80,8 @@ class LockScreen extends Component {
     this.setState({ release })
     console.log(`LockScreen: Release set to ${release}`)
     this._onMouseUp()
+    if (!release)
+      this.focusLockScreen()
   }
 
   _onMouseDown(event) {
@@ -104,6 +112,7 @@ class LockScreen extends Component {
       <div
         tabIndex="0"
         onKeyDown={this._handleKeyPress.bind(this)}
+        ref={lockScreen => { this.lockScreen = lockScreen }}
         onMouseDown={this._onMouseDown.bind(this)}
         onMouseUp={this._onMouseUp.bind(this)}
         onWheel={this._onScroll.bind(this)}
