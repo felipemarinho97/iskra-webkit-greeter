@@ -63,15 +63,16 @@ class LockScreen extends Component {
   }
 
   getRelease() {
-    if (this.getTransformPercentage() > 50)
+    if (this.getTransformPercentage() > 50) {
       return true;
-    else {
+    } else {
       return false;
     }
   }
 
   setRelease(release) {
     this.setState({ release })
+    console.log(`LockScreen: Release set to ${release}`)
     this._onMouseUp()
   }
 
@@ -87,9 +88,22 @@ class LockScreen extends Component {
     console.log(event.deltaY, event.deltaX, event.deltaZ, event.deltaMode);
   }
 
+  _handleKeyPress(event) {
+    switch (event.keyCode) {
+      case 13:
+      case 32:
+        this.setRelease(true)
+        // Don't know why, but this is necessary to the release works.
+        this.setState({ clickXlocation: 0 })
+        break;
+    }
+  }
+
   render () {
     return (
       <div
+        tabIndex="0"
+        onKeyDown={this._handleKeyPress.bind(this)}
         onMouseDown={this._onMouseDown.bind(this)}
         onMouseUp={this._onMouseUp.bind(this)}
         onWheel={this._onScroll.bind(this)}
