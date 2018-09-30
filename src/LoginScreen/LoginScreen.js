@@ -79,7 +79,6 @@ class LoginScreen extends Component {
   }
 
   startDefaultSession(count = 0) {
-    console.log('called', count);
     if (window.lightdm.is_authenticated) {
       window.lightdm.start_session()
     } else if (count < 5) {
@@ -145,6 +144,7 @@ class LoginScreen extends Component {
                   <span style={{ fontSize: '1.5rem', textAlign: 'left' }} className="font-white">{this.state.username}</span>
                   <Input.Group compact>
                     <Input
+                      autoFocus
                       style={{ width: '80%' }}
                       className="login-input"
                       onChange={this.handleChangePass.bind(this)}
