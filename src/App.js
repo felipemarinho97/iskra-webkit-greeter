@@ -21,7 +21,7 @@ class App extends Component {
     super(props);
 
     this.state = {
-      x: 0, y: 0, width: 0, height: 0, lkInt: {}
+      x: 0, y: 0, width: 0, height: 0, lkInt: {},focus:true
     };
 
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
@@ -41,7 +41,10 @@ class App extends Component {
   }
 
   _onMouseMove(e) {
-    this.setState({ x: e.screenX, y: e.screenY });
+    if(document.getElementById('username')){
+      document.getElementById('username').focus();
+    }
+    this.setState({ x: e.screenX, y: e.screenY, focus:false });
   }
 
   render() {

@@ -42,33 +42,52 @@ class LoginScreen extends Component {
 
   submitUser(username) {
     window.lightdm.respond(username);
-
-    this.setState({ showPassForm: true });
+    if(username.length > 0){
+      this.setState({ showPassForm: true });
+    }else{
+      document.getElementById('username').style.border = "2px solid red";
+      document.getElementById('username-warning').style.display = 'block';
+      document.getElementById('username-warning').innerText = 'Username Cannot be Empty';
+    }
   }
 
   submitPass(password) {
     this.setState({ showPassForm: true });
     window.lightdm.respond(password);
-    this.startDefaultSession()
+    if(password.length > 0){
+      this.startDefaultSession()
+    }else{
+      document.getElementById('password').style.border = "2px solid red";
+      document.getElementById('password-warning').style.display = 'block';
+      document.getElementById('password-warning').innerHTML = 'Password Cannot be Empty';
+    }
   }
 
   handleChangeUser(event) {
-    if (event.key === "Enter") {
-      this.submitUser(this.state.username)
-    }
-
     this.setState({ username: event.target.value });
+    if(event.target.value.length < 1){
+      document.getElementById('username').style.border = "2px solid red";
+    }else{
+      document.getElementById('username').style.border = "2px solid green";
+      if (event.key === "Enter") {
+        this.submitUser(this.state.username)
+      }
+    }
 
   }
 
   handleChangePass(event) {
-    if (event.key === "Enter") {
-      this.submitPass(this.state.password)
-    } else if (event.keyCode === 27) {
-      this.cancelAuthentication();
-    }
     this.setState({ password: event.target.value });
-
+    if(event.target.value.length < 1){
+      document.getElementById('password').style.border = "2px solid red";
+    }else{
+      document.getElementById('password').style.border = "2px solid green";
+      if (event.key === "Enter") {
+        this.submitPass(this.state.password)
+      } else if (event.keyCode === 27) {
+        this.cancelAuthentication();
+      }
+    }
   }
 
   cancelAuthentication() {
@@ -84,7 +103,6 @@ class LoginScreen extends Component {
     } else if (count < 5) {
       this.setState({ isInAuth: true })
       wait(this.startDefaultSession.bind(this), (2**count)*1000, count + 1)
-
     } else {
       this.cancelAuthentication();
     }
@@ -142,11 +160,15 @@ class LoginScreen extends Component {
               {this.state.showPassForm ? (
                   <div>
                   <span style={{ fontSize: '1.5rem', textAlign: 'left' }} className="font-white">{this.state.username}</span>
+                  <br/>
+                  <label id="password-warning"></label>
                   <Input.Group compact>
                     <Input
+                    required
                       autoFocus
                       style={{ width: '80%' }}
                       className="login-input"
+                      id="password"
                       onChange={this.handleChangePass.bind(this)}
                       onKeyPress={this.handleChangePass.bind(this)}
                       prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}
@@ -160,9 +182,13 @@ class LoginScreen extends Component {
                 ) :
                 (
                   <Input.Group compact>
+                  <label id="username-warning"></label>
+                  <br/>
                     <Input
+                       autofocus
                       style={{ width: '80%' }}
                       className="login-input"
+                      id="username"
                       onChange={this.handleChangeUser.bind(this)}
                       onKeyPress={this.handleChangeUser.bind(this)}
                       prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}

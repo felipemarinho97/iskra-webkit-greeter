@@ -23,9 +23,7 @@
 }
 
 .App-container {
-  top: 0;
-  bottom: 0;
-  -webkit-user-select: none;
+  height: 100vh;
 }
 
 @keyframes App-logo-spin {
