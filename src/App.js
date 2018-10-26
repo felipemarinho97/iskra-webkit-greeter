@@ -21,7 +21,7 @@ class App extends Component {
     super(props);
 
     this.state = {
-      x: 0, y: 0, width: 0, height: 0, lkInt: {},focus:true
+      x: 0, y: 0, width: 0, height: 0, lkInt: {},focus:false,
     };
 
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
@@ -41,17 +41,14 @@ class App extends Component {
   }
 
   _onMouseMove(e) {
-    if(document.getElementById('username')){
-      document.getElementById('username').focus();
-    }
-    this.setState({ x: e.screenX, y: e.screenY, focus:false });
+    this.setState({ x: e.screenX, y: e.screenY, focus:true });
   }
 
   render() {
     return (
       <div  onMouseMove={this._onMouseMove.bind(this)} className="App App-container">
         <LockScreen lkInt={this.state.lkInt} getWallpaper={getRandomWallpaper} y={this.state.y} vpHeight={this.state.height}/>
-        <LoginScreen lock={() => this.state.lkInt.setRelease(false)} getWallpaper={getRandomWallpaper} />
+        <LoginScreen lock={() => this.state.lkInt.setRelease(false)} getWallpaper={getRandomWallpaper} focus={this.state.focus}/>
       </div>
     );
   }

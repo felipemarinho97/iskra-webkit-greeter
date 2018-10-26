@@ -110,6 +110,9 @@ class LoginScreen extends Component {
   }
 
   render() {
+    if(this.props.focus){
+      this.nameInput.focus();
+    }
     const menu = (
       <Menu>
         {window.lightdm.can_hibernate ?
@@ -185,8 +188,8 @@ class LoginScreen extends Component {
                   <label id="username-warning"></label>
                   <br/>
                     <Input
-                       autofocus
-                      style={{ width: '80%' }}
+                    ref={(input) => { this.nameInput = input; }}
+                       style={{ width: '80%' }}
                       className="login-input"
                       id="username"
                       onChange={this.handleChangeUser.bind(this)}
