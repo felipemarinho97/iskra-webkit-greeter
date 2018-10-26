@@ -23,7 +23,9 @@ class LoginScreen extends Component {
       showPassForm: false,
       time: '',
       timeFormat: 'HH:mm',
-      isInAuth: false
+      isInAuth: false,
+      validateStatus: '',
+      warningText: ''
     };
 
     window.lightdm.authenticate();
@@ -41,15 +43,36 @@ class LoginScreen extends Component {
   }
 
   submitUser(username) {
-    window.lightdm.respond(username);
-
-    this.setState({ showPassForm: true });
+    if (username) {
+      window.lightdm.respond(username);
+      this.setState({ 
+        showPassForm: true,
+        validateStatus: '',
+        warningText: ''
+      });
+    } else {
+      this.setState({ 
+        validateStatus: 'warning',
+        warningText: 'Please enter your username.'
+      });
+    }
   }
 
   submitPass(password) {
-    this.setState({ showPassForm: true });
-    window.lightdm.respond(password);
-    this.startDefaultSession()
+    if (password) {
+      this.setState({ 
+        showPassForm: true,
+        validateStatus: '',
+        warningText: ''         
+      });
+      window.lightdm.respond(password);
+      this.startDefaultSession()
+    } else {
+      this.setState({
+        validateStatus: 'warning',
+        warningText: 'Please enter your password.'        
+      });
+    }
   }
 
   handleChangeUser(event) {
@@ -138,7 +161,7 @@ class LoginScreen extends Component {
             size={96}
             icon={this.state.username ? undefined : "user"}>{this.state.username.toUpperCase()[0]}</Avatar><br/>
           {!this.state.isInAuth ?
-            (<Form.Item>
+            ( <Form.Item validateStatus={this.state.validateStatus} help={this.state.warningText}>
               {this.state.showPassForm ? (
                   <div>
                   <span style={{ fontSize: '1.5rem', textAlign: 'left' }} className="font-white">{this.state.username}</span>
