@@ -3,6 +3,7 @@ import { Form, Input, Icon, Avatar, Menu, Dropdown, Button } from 'antd';
 import './LoginScreen.css';
 import * as moment from 'moment';
 import background from '../img/wallpapers/adwaita-day.jpg';
+import { FormattedMessage } from 'react-intl';
 // import background from '/usr/share/backgrounds/gnome/ColdWarm.jpg';
 
 async function wait(fun, time, ...args) {
@@ -27,7 +28,6 @@ class LoginScreen extends Component {
     };
 
     window.lightdm.authenticate();
-
   }
 
   componentWillMount() {
@@ -92,27 +92,37 @@ class LoginScreen extends Component {
   }
 
   render() {
+    // to inject formated messages into components, we need to us a function like this:
+    const oUserInput = <FormattedMessage id="LoginScreen.UserPrompt">
+      { UserPrompt => <Input
+        style={{ width: '80%' }}
+        className="login-input"
+        onChange={this.handleChangeUser.bind(this)}
+        onKeyPress={this.handleChangeUser.bind(this)}
+        prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
+        placeholder={UserPrompt} type="text" value={this.state.username}/> }
+    </FormattedMessage>
     const menu = (
       <Menu>
         {window.lightdm.can_hibernate ?
           (<Menu.Item key="0">
-          <a href="#" onClick={() => window.lightdm.hibernate()}><Icon type="pause-circle-o" /> Hibernar</a>
+          <a href="#" onClick={() => window.lightdm.hibernate()}><Icon type="pause-circle-o" /> <FormattedMessage id="LoginScreen.Hibernate"/></a>
         </Menu.Item>) : ""}
         {window.lightdm.can_suspend ?
           (<Menu.Item key="1">
-          <a href="#" onClick={() => window.lightdm.suspend()}><Icon type="minus-circle-o" /> Suspender</a>
+          <a href="#" onClick={() => window.lightdm.suspend()}><Icon type="minus-circle-o" /> <FormattedMessage id="LoginScreen.Suspend"/></a>
         </Menu.Item>) : ""}
         {window.lightdm.can_restart ?
           (<Menu.Item key="2">
-          <a href="#" onClick={() => window.lightdm.restart()}><Icon type="reload" /> Reiniciar</a>
+          <a href="#" onClick={() => window.lightdm.restart()}><Icon type="reload" /> <FormattedMessage id="LoginScreen.Restart"/></a>
         </Menu.Item>) : ""}
         {window.lightdm.can_shutdown ?
           (<Menu.Item key="3">
-          <a href="#" onClick={() => window.lightdm.shutdown()}><Icon type="poweroff" /> Desligar</a>
+          <a href="#" onClick={() => window.lightdm.shutdown()}><Icon type="poweroff" /> <FormattedMessage id="LoginScreen.Shutdown"/></a>
         </Menu.Item>) : ""}
 
         <Menu.Divider />
-        <Menu.Item key="4"><a href="#" onClick={this.props.lock}><Icon type="lock" /> Bloquear</a></Menu.Item>
+        <Menu.Item key="4"><a href="#" onClick={this.props.lock}><Icon type="lock" /> <FormattedMessage id="LoginScreen.Lock"/></a></Menu.Item>
       </Menu>
     )
 
@@ -160,13 +170,7 @@ class LoginScreen extends Component {
                 ) :
                 (
                   <Input.Group compact>
-                    <Input
-                      style={{ width: '80%' }}
-                      className="login-input"
-                      onChange={this.handleChangeUser.bind(this)}
-                      onKeyPress={this.handleChangeUser.bind(this)}
-                      prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
-                      placeholder="Usuário" type="text" value={this.state.username}/>
+                    { oUserInput }
                     <Button
                       onClick={() => this.submitUser(this.state.username)}
                       style={{ width: '15%' }} type="primary"><Icon type="right" /></Button>

@@ -47,8 +47,8 @@ class App extends Component {
   render() {
     return (
       <div  onMouseMove={this._onMouseMove.bind(this)} className="App App-container">
-        <LockScreen lkInt={this.state.lkInt} getWallpaper={getRandomWallpaper} y={this.state.y} vpHeight={this.state.height}/>
-        <LoginScreen lock={() => this.state.lkInt.setRelease(false)} getWallpaper={getRandomWallpaper} />
+        <LockScreen locale={this.props.locale} lkInt={this.state.lkInt} getWallpaper={getRandomWallpaper} y={this.state.y} vpHeight={this.state.height}/>
+        <LoginScreen locale={this.props.locale} lock={() => this.state.lkInt.setRelease(false)} getWallpaper={getRandomWallpaper} />
       </div>
     );
   }

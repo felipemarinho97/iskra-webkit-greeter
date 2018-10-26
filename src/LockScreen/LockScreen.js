@@ -18,6 +18,7 @@ class LockScreen extends Component {
       clickXlocation: this.props.vpHeight,
       release: false
     };
+    moment.locale(this.props.locale);
   }
 
   componentWillMount() {
