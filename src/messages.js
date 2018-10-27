@@ -68,10 +68,23 @@ export default {
       Shutdown: "Avslutt",
       Lock: "Lås",
       UserPlaceholder: "Bruker",
-      PasswordPlaceholder: "Passord"
+      PasswordPlaceholder: "Passord",
       UsernameWarning: "Vennligst skriv inn brukernavn.",
       PasswordWarning: "Vennligst skriv inn passord."
     }
-  }
+  },
+  tr: {
+    LoginScreen: {
+      Hibernate: "Hazırda Beklet",
+      Suspend: "Uyut",
+      Restart: "Yeniden Başlat",
+      Shutdown: "Kapat",
+      Lock: "Kilitle",
+      UserPlaceholder: "Kullanıcı",
+      PasswordPlaceholder: "Parola",
+      UsernameWarning: "Lütfen kullanıcı adını gir.",
+      PasswordWarning: "Lütfen parolanı gir."
+    }
+  },
 };
 
