@@ -72,6 +72,19 @@ export default {
       UsernameWarning: "Vennligst skriv inn brukernavn.",
       PasswordWarning: "Vennligst skriv inn passord."
     }
+  },
+  hi:{
+    LoginScreen:{
+      Hibernate: "seetanidra",
+      Suspend: "nilambit",
+      Restart: "punah aarambh",
+      Shutdown: "bandh",
+      Lock: "Thala",
+      UserPlaceholder: "upayogakarta",
+      PasswordPlaceholder: "paaran shabd",
+      UsernameWarning: "Kripya apna username dale",
+      PasswordWarning: "kripya apna password dale"
+    }
   }
 };
 
