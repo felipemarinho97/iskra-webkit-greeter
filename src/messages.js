@@ -43,4 +43,15 @@ export default {
       PasswordPlaceholder: 'Mot de passe'
     }
   },
+  'no': {
+    LoginScreen: {
+      Hibernate: 'Dvale',
+      Suspend: 'Suspendere',
+      Restart: 'Start om',
+      Shutdown: 'Avslutt',
+      Lock: 'Lås',
+      UserPlaceholder: 'Bruker',
+      PasswordPlaceholder: 'Passord'
+    }
+  },
 }
