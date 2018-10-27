@@ -49,7 +49,7 @@ export default {
       PasswordPlaceholder: "Mot de passe"
     }
   },
-  'no': {
+  no: {
     LoginScreen: {
       Hibernate: 'Dvale',
       Suspend: 'Suspendere',
