@@ -9,6 +9,7 @@ import en from 'react-intl/locale-data/en'; // English
 import de from 'react-intl/locale-data/de'; // German
 import fr from 'react-intl/locale-data/fr'; // French
 import es from 'react-intl/locale-data/es'; // Spanish
+import sv from 'react-intl/locale-data/sv'; // Swedish
 // ... and so on
 
 import { flattenMessages } from './js/utils'; // flatten messages util function in order to use nested js object for translated texts
@@ -17,6 +18,7 @@ import messages from './messages';
 require('moment/locale/es');  
 require('moment/locale/de');  
 require('moment/locale/fr'); 
+require('moment/locale/sv');
 
 addLocaleData([...en, ...de, ...fr, ...es]); // don't forget to add here and spread whatever language that was added ex: ...it 
 
