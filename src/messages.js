@@ -12,6 +12,19 @@ export default {
       PasswordWarning: "Please enter your password."
     }
   },
+  de: {
+    LoginScreen: {
+      Hibernate: "Energie sparen",
+      Suspend: "Ruhezustand",
+      Restart: "Neustarten",
+      Shutdown: "Herunterfahren",
+      Lock: "Sperren",
+      UserPlaceholder: "Bentzer",
+      PasswordPlaceholder: "Passwort",
+      UsernameWarning: "Bitte Benutzername eingeben.",
+      PasswordWarning: "Bitte Passwort eingeben."
+    }
+  },
   pt: {
     LoginScreen: {
       Hibernate: "Hibernar",
