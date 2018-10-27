@@ -12,6 +12,10 @@ import es from 'react-intl/locale-data/es'; // Spanish
 import sv from 'react-intl/locale-data/sv'; // Swedish
 import no from 'react-intl/locale-data/no'; // Norwegian
 import pl from 'react-intl/locale-data/pl'; // Polish
+import tr from 'react-intl/locale-data/tr'; // Turkish
+import uk from 'react-init/locale-data/uk'; // Ukrainian
+import ru from 'react-init/locale-data/ru'; // Russian
+
 // ... and so on
 
 import { flattenMessages } from './js/utils'; // flatten messages util function in order to use nested js object for translated texts
@@ -23,8 +27,24 @@ require('moment/locale/fr');
 require('moment/locale/sv');
 require('moment/locale/no'); 
 require('moment/locale/pl'); 
+require('moment/locale/tr');
+require('moment/locale/uk'); 
+require('moment/locale/ru'); 
 
-addLocaleData([...en, ...de, ...fr, ...es, ...sv, ...no, ...pl]); // don't forget to add here and spread whatever language that was added ex: ...it 
+const localeData = [
+  ...en, 
+  ...de, 
+  ...fr, 
+  ...es, 
+  ...sv, 
+  ...no, 
+  ...pl,
+  ...tr, 
+  ...uk, 
+  ...ru,
+];
+
+addLocaleData(localeData); // don't forget to add here and spread whatever language that was added ex: ...it 
 
 // constants
 const sDefaultLocale = "en"; // could be changed
