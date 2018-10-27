@@ -14,24 +14,24 @@ import no from 'react-intl/locale-data/no'; // Norwegian
 import lt from 'react-intl/locale-data/lt'; // Lithuanian
 import pl from 'react-intl/locale-data/pl'; // Polish
 import tr from 'react-intl/locale-data/tr'; // Turkish
-import uk from 'react-init/locale-data/uk'; // Ukrainian
-import ru from 'react-init/locale-data/ru'; // Russian
+import uk from 'react-intl/locale-data/uk'; // Ukrainian
+import ru from 'react-intl/locale-data/ru'; // Russian
 
 // ... and so on
 
 import { flattenMessages } from './js/utils'; // flatten messages util function in order to use nested js object for translated texts
 import messages from './messages';
 
-require('moment/locale/es');  
-require('moment/locale/de');  
-require('moment/locale/fr'); 
-require('moment/locale/sv');
-require('moment/locale/no'); 
-require('moment/locale/lt');
-require('moment/locale/pl'); 
-require('moment/locale/tr');
-require('moment/locale/uk'); 
-require('moment/locale/ru'); 
+import 'moment/locale/es';  
+import 'moment/locale/de';  
+import 'moment/locale/fr'; 
+import 'moment/locale/sv';
+import "moment/locale/nb"; 
+import 'moment/locale/lt';
+import 'moment/locale/pl'; 
+import 'moment/locale/tr';
+import 'moment/locale/uk'; 
+import 'moment/locale/ru'; 
 
 const localeData = [
   ...en, 
