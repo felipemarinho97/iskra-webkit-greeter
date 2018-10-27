@@ -88,6 +88,19 @@ export default {
       PasswordWarning: "Vennligst skriv inn passord."
     }
   },
+  lt: {
+    LoginScreen: {
+      Hibernate: "Pristabdyti",
+      Suspend: "Nutraukti",
+      Restart: "Restartuoti",
+      Shutdown: "Išjungti",
+      Lock: "Užrakinti",
+      UserPlaceholder: "Vartotojas",
+      PasswordPlaceholder: "Slaptažodis",
+      UsernameWarning: "Įveskite vartotojo vardą.",
+      PasswordWarning: "Įveskite slaptažodį."
+    }
+  },
   pl: {
     LoginScreen: {
       Hibernate: "Uspij",

@@ -11,6 +11,7 @@ import fr from 'react-intl/locale-data/fr'; // French
 import es from 'react-intl/locale-data/es'; // Spanish
 import sv from 'react-intl/locale-data/sv'; // Swedish
 import no from 'react-intl/locale-data/no'; // Norwegian
+import lt from 'react-intl/locale-data/lt'; // Lithuanian
 import pl from 'react-intl/locale-data/pl'; // Polish
 import tr from 'react-intl/locale-data/tr'; // Turkish
 import uk from 'react-init/locale-data/uk'; // Ukrainian
@@ -26,6 +27,7 @@ require('moment/locale/de');
 require('moment/locale/fr'); 
 require('moment/locale/sv');
 require('moment/locale/no'); 
+require('moment/locale/lt');
 require('moment/locale/pl'); 
 require('moment/locale/tr');
 require('moment/locale/uk'); 
@@ -38,6 +40,7 @@ const localeData = [
   ...es, 
   ...sv, 
   ...no, 
+  ...lt,
   ...pl,
   ...tr, 
   ...uk, 
