@@ -75,6 +75,19 @@ export default {
       PasswordWarning: "Vennligst skriv inn passord."
     }
   },
+  tr: {
+    LoginScreen: {
+      Hibernate: "Hazırda Beklet",
+      Suspend: "Uyut",
+      Restart: "Yeniden Başlat",
+      Shutdown: "Kapat",
+      Lock: "Kilitle",
+      UserPlaceholder: "Kullanıcı",
+      PasswordPlaceholder: "Parola",
+      UsernameWarning: "Lütfen kullanıcı adını gir.",
+      PasswordWarning: "Lütfen parolanı gir."
+    }
+  },
   uk: {
     LoginScreen: {
       Hibernate: "Сплячий режим",
@@ -100,6 +113,6 @@ export default {
       UsernameWarning: "Пожалуйста, введите имя пользователя.",
       PasswordWarning: "Пожалуйста, введите пароль."
     }
-  }
+  },
 };
 
