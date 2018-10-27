@@ -75,6 +75,19 @@ export default {
       PasswordWarning: "Vennligst skriv inn passord."
     }
   },
+  pl: {
+    LoginScreen: {
+      Hibernate: "Uspij",
+      Suspend: "Wstrzymaj",
+      Restart: "Uruchom ponownie",
+      Shutdown: "Wylacz",
+      Lock: "Blokada",
+      UserPlaceholder: "Uzytkownik",
+      PasswordPlaceholder: "Haslo",
+      UsernameWarning: "Wprowadz nazwe uzytkownika.",
+      PasswordWarning: "Wprowadz haslo uzytkownika."
+    }
+  },
   tr: {
     LoginScreen: {
       Hibernate: "Hazırda Beklet",
