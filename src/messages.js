@@ -72,6 +72,32 @@ export default {
       UsernameWarning: "Vennligst skriv inn brukernavn.",
       PasswordWarning: "Vennligst skriv inn passord."
     }
+  },
+  uk: {
+    LoginScreen: {
+      Hibernate: "Сплячий режим",
+      Suspend: "Згорнути",
+      Restart: "Перезавантажити",
+      Shutdown: "Вимкнути",
+      Lock: "Заблокувати",
+      UserPlaceholder: "Ім'я користувача",
+      PasswordPlaceholder: "Пароль",
+      UsernameWarning: "Будь ласка, введіть ім'я користувача.",
+      PasswordWarning: "Будь ласка, введіть пароль."
+    }
+  },
+  ru: {
+    LoginScreen: {
+      Hibernate: "Спящий режим",
+      Suspend: "Свернуть",
+      Restart: "Перезагрузить",
+      Shutdown: "Выключить",
+      Lock: "Заблокировать",
+      UserPlaceholder: "Имя пользователя",
+      PasswordPlaceholder: "Пароль",
+      UsernameWarning: "Пожалуйста, введите имя пользователя.",
+      PasswordWarning: "Пожалуйста, введите пароль."
+    }
   }
 };
 
