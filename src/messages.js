@@ -40,24 +40,26 @@ export default {
   },
   fr: {
     LoginScreen: {
-      Hibernate: "Hiberer",
+      Hibernate: "Hiberner",
       Suspend: "Suspendre",
       Restart: "Redémarrer",
-      Shutdown: "Arrêt de l'appareil",
-      Lock: "Verrou",
+      Shutdown: "Arrêter",
+      Lock: "Verrouiller",
       UserPlaceholder: "Utilisateur",
-      PasswordPlaceholder: "Mot de passe"
+      PasswordPlaceholder: "Mot de passe",
+      UsernameWarning: "Veuillez saisir votre nom d'utilisateur.",
+      PasswordWarning: "Veuillez saisir votre mot de passe."
     }
   },
-  'sv': {
+  sv: {
     LoginScreen: {
-      Hibernate: 'Strömsparläge',
-      Suspend: 'Suspendera',
-      Restart: 'Starta om',
-      Shutdown: 'Stäng ner',
-      Lock: 'Lås',
-      UsernameWarning: 'Var vänlig och skriv in ditt användarnamn.',
-      PasswordWarning: 'Var vänlig och skriv in ditt lösenord.'
+      Hibernate: "Strömsparläge",
+      Suspend: "Suspendera",
+      Restart: "Starta om",
+      Shutdown: "Stäng ner",
+      Lock: "Lås",
+      UsernameWarning: "Var vänlig och skriv in ditt användarnamn.",
+      PasswordWarning: "Var vänlig och skriv in ditt lösenord."
     }
   },
   no: {
@@ -84,6 +86,32 @@ export default {
       PasswordPlaceholder: "Parola",
       UsernameWarning: "Lütfen kullanıcı adını gir.",
       PasswordWarning: "Lütfen parolanı gir."
+    }
+  },
+  uk: {
+    LoginScreen: {
+      Hibernate: "Сплячий режим",
+      Suspend: "Згорнути",
+      Restart: "Перезавантажити",
+      Shutdown: "Вимкнути",
+      Lock: "Заблокувати",
+      UserPlaceholder: "Ім'я користувача",
+      PasswordPlaceholder: "Пароль",
+      UsernameWarning: "Будь ласка, введіть ім'я користувача.",
+      PasswordWarning: "Будь ласка, введіть пароль."
+    }
+  },
+  ru: {
+    LoginScreen: {
+      Hibernate: "Спящий режим",
+      Suspend: "Свернуть",
+      Restart: "Перезагрузить",
+      Shutdown: "Выключить",
+      Lock: "Заблокировать",
+      UserPlaceholder: "Имя пользователя",
+      PasswordPlaceholder: "Пароль",
+      UsernameWarning: "Пожалуйста, введите имя пользователя.",
+      PasswordWarning: "Пожалуйста, введите пароль."
     }
   },
 };
