@@ -72,6 +72,19 @@ export default {
       UsernameWarning: "Vennligst skriv inn brukernavn.",
       PasswordWarning: "Vennligst skriv inn passord."
     }
+  },
+  zh: {
+    LoginScreen: {
+      Hibernate: "休眠",
+      Suspend: "暂停",
+      Restart: "重启",
+      Shutdown: "关闭",
+      Lock: "锁",
+      UserPlaceholder: "用户名",
+      PasswordPlaceholder: "密码",
+      UsernameWarning: "请输入您的用户名.",
+      PasswordWarning: "请输入您的密码."
+    }
   }
 };
 
