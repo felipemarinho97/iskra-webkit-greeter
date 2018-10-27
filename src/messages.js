@@ -168,5 +168,18 @@ export default {
       PasswordWarning: "Пожалуйста, введите пароль."
     }
   },
+  it: {
+    LoginScreen: {
+      Hibernate: "Iberna",
+      Suspend: "Sospendi",
+      Restart: "Riavvia",
+      Shutdown: "Arresta",
+      Lock: "Blocca",
+      UserPlaceholder: "Utente",
+      PasswordPlaceholder: "Password",
+      UsernameWarning: "Per favore, inserisci il tuo nome utente.",
+      PasswordWarning: "Per favore, inserisci la tua password."
+    }
+  },
 };
 
