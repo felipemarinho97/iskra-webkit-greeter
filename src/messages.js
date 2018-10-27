@@ -48,5 +48,16 @@ export default {
       UserPlaceholder: "Utilisateur",
       PasswordPlaceholder: "Mot de passe"
     }
+  },
+  'sv': {
+    LoginScreen: {
+      Hibernate: 'Strömsparläge',
+      Suspend: 'Suspendera',
+      Restart: 'Starta om',
+      Shutdown: 'Stäng ner',
+      Lock: 'Lås',
+      UsernameWarning: 'Var vänlig och skriv in ditt användarnamn.',
+      PasswordWarning: 'Var vänlig och skriv in ditt lösenord.'
+    }
   }
-};
+}
