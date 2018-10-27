@@ -11,6 +11,7 @@ import fr from 'react-intl/locale-data/fr'; // French
 import es from 'react-intl/locale-data/es'; // Spanish
 import sv from 'react-intl/locale-data/sv'; // Swedish
 import no from 'react-intl/locale-data/no'; // Norwegian
+import hi from 'react-intl/locale-data/hi'; // Hindi
 // ... and so on
 
 import { flattenMessages } from './js/utils'; // flatten messages util function in order to use nested js object for translated texts
