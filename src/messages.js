@@ -49,15 +49,15 @@ export default {
       PasswordPlaceholder: "Mot de passe"
     }
   },
-  'sv': {
+  sv: {
     LoginScreen: {
-      Hibernate: 'Strömsparläge',
-      Suspend: 'Suspendera',
-      Restart: 'Starta om',
-      Shutdown: 'Stäng ner',
-      Lock: 'Lås',
-      UsernameWarning: 'Var vänlig och skriv in ditt användarnamn.',
-      PasswordWarning: 'Var vänlig och skriv in ditt lösenord.'
+      Hibernate: "Strömsparläge",
+      Suspend: "Suspendera",
+      Restart: "Starta om",
+      Shutdown: "Stäng ner",
+      Lock: "Lås",
+      UsernameWarning: "Var vänlig och skriv in ditt användarnamn.",
+      PasswordWarning: "Var vänlig och skriv in ditt lösenord."
     }
   },
   no: {
@@ -68,7 +68,7 @@ export default {
       Shutdown: "Avslutt",
       Lock: "Lås",
       UserPlaceholder: "Bruker",
-      PasswordPlaceholder: "Passord"
+      PasswordPlaceholder: "Passord",
       UsernameWarning: "Vennligst skriv inn brukernavn.",
       PasswordWarning: "Vennligst skriv inn passord."
     }
