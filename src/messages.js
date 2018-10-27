@@ -50,8 +50,8 @@ export default {
       Restart: 'Starta om',
       Shutdown: 'Stäng ner',
       Lock: 'Lås',
-      UserPlaceholder: 'Användare',
-      PasswordPlaceholder: 'Lösenord'
+      UsernameWarning: 'Var vänlig och skriv in ditt användarnamn.',
+      PasswordWarning: 'Var vänlig och skriv in ditt lösenord.'
     }
   }
 }

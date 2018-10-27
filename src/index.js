@@ -20,7 +20,7 @@ require('moment/locale/de');
 require('moment/locale/fr'); 
 require('moment/locale/sv');
 
-addLocaleData([...en, ...de, ...fr, ...es]); // don't forget to add here and spread whatever language that was added ex: ...it 
+addLocaleData([...en, ...de, ...fr, ...es, ...sv]); // don't forget to add here and spread whatever language that was added ex: ...it 
 
 // constants
 const sDefaultLocale = "en"; // could be changed
