@@ -40,13 +40,15 @@ export default {
   },
   fr: {
     LoginScreen: {
-      Hibernate: "Hiberer",
+      Hibernate: "Hiberner",
       Suspend: "Suspendre",
       Restart: "Redémarrer",
-      Shutdown: "Arrêt de l'appareil",
-      Lock: "Verrou",
+      Shutdown: "Arrêter",
+      Lock: "Verrouiller",
       UserPlaceholder: "Utilisateur",
-      PasswordPlaceholder: "Mot de passe"
+      PasswordPlaceholder: "Mot de passe",
+      UsernameWarning: "Veuillez saisir votre nom d'utilisateur.",
+      PasswordWarning: "Veuillez saisir votre mot de passe."
     }
   },
   'sv': {
