@@ -53,7 +53,7 @@ class LoginScreen extends Component {
     } else {
       this.setState({ 
         validateStatus: 'warning',
-        warningText: 'Please enter your username.'
+        warningText: <FormattedMessage id="LoginScreen.UsernameWarning" />
       });
     }
   }
@@ -70,7 +70,7 @@ class LoginScreen extends Component {
     } else {
       this.setState({
         validateStatus: 'warning',
-        warningText: 'Please enter your password.'        
+        warningText: <FormattedMessage id="LoginScreen.PasswordWarning" />        
       });
     }
   }
