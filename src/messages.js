@@ -6,7 +6,19 @@ export default {
       Restart: 'Restart',
       Shutdown: 'Shutdown',
       Lock: 'Lock',
-      UserPrompt: 'User'
+      UserPlaceholder: 'User',
+      PasswordPlaceholder: 'Password'
+    }
+  },
+  'pt': {
+    LoginScreen: {
+      Hibernate: 'Hibernar',
+      Suspend: 'Suspender',
+      Restart: 'Reiniciar',
+      Shutdown: 'Desligar',
+      Lock: 'Bloquear',
+      UserPlaceholder: 'Usuário',
+      PasswordPlaceholder: 'Senha'
     }
   },
   'es': {
@@ -14,9 +26,10 @@ export default {
       Hibernate: 'Hibernar',
       Suspend: 'Suspender',
       Restart: 'Reiniciar',
-      Shutdown: 'Desligar',
+      Shutdown: 'Apagar',
       Lock: 'Bloquear',
-      UserPrompt: 'Usuário'
+      UserPlaceholder: 'Usuario',
+      PasswordPlaceholder: 'Contraseña'
     }
   },
   'fr': {
@@ -26,7 +39,8 @@ export default {
       Restart: 'Redémarrer',
       Shutdown: 'Arrêt de l\'appareil',
       Lock: 'Verrou',
-      UserPrompt: 'Utilisateur'
+      UserPlaceholder: 'Utilisateur',
+      PasswordPlaceholder: 'Mot de passe'
     }
   },
 }

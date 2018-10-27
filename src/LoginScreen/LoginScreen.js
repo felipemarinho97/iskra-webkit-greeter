@@ -93,14 +93,24 @@ class LoginScreen extends Component {
 
   render() {
     // to inject formated messages into components, we need to us a function like this:
-    const oUserInput = <FormattedMessage id="LoginScreen.UserPrompt">
-      { UserPrompt => <Input
+    const oUserInput = <FormattedMessage id="LoginScreen.UserPlaceholder">
+      { UserPlaceholder => <Input
         style={{ width: '80%' }}
         className="login-input"
         onChange={this.handleChangeUser.bind(this)}
         onKeyPress={this.handleChangeUser.bind(this)}
         prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
-        placeholder={UserPrompt} type="text" value={this.state.username}/> }
+        placeholder={UserPlaceholder} type="text" value={this.state.username}/> }
+    </FormattedMessage>
+    const oPasswordInput = <FormattedMessage id="LoginScreen.PasswordPlaceholder">
+      { PasswordPlaceholder => <Input
+        autoFocus
+        style={{ width: '80%' }}
+        className="login-input"
+        onChange={this.handleChangePass.bind(this)}
+        onKeyPress={this.handleChangePass.bind(this)}
+        prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}
+        placeholder={PasswordPlaceholder} type="password" value={this.state.password} /> }
     </FormattedMessage>
     const menu = (
       <Menu>
@@ -153,14 +163,7 @@ class LoginScreen extends Component {
                   <div>
                   <span style={{ fontSize: '1.5rem', textAlign: 'left' }} className="font-white">{this.state.username}</span>
                   <Input.Group compact>
-                    <Input
-                      autoFocus
-                      style={{ width: '80%' }}
-                      className="login-input"
-                      onChange={this.handleChangePass.bind(this)}
-                      onKeyPress={this.handleChangePass.bind(this)}
-                      prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}
-                      placeholder="Senha" type="password" value={this.state.password} />
+                    { oPasswordInput }
                     <Button
                       onClick={() => this.submitPass(this.state.password)}
                       style={{ width: '15%' }} type="primary"><Icon type="right" /></Button>
