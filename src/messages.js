@@ -59,5 +59,19 @@ export default {
       UsernameWarning: 'Var vänlig och skriv in ditt användarnamn.',
       PasswordWarning: 'Var vänlig och skriv in ditt lösenord.'
     }
+  },
+  no: {
+    LoginScreen: {
+      Hibernate: "Dvale",
+      Suspend: "Suspendere",
+      Restart: "Start om",
+      Shutdown: "Avslutt",
+      Lock: "Lås",
+      UserPlaceholder: "Bruker",
+      PasswordPlaceholder: "Passord"
+      UsernameWarning: "Vennligst skriv inn brukernavn.",
+      PasswordWarning: "Vennligst skriv inn passord."
+    }
   }
-}
+};
+
