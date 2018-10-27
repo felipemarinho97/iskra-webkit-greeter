@@ -51,13 +51,15 @@ export default {
   },
   no: {
     LoginScreen: {
-      Hibernate: 'Dvale',
-      Suspend: 'Suspendere',
-      Restart: 'Start om',
-      Shutdown: 'Avslutt',
-      Lock: 'Lås',
-      UserPlaceholder: 'Bruker',
-      PasswordPlaceholder: 'Passord'
+      Hibernate: "Dvale",
+      Suspend: "Suspendere",
+      Restart: "Start om",
+      Shutdown: "Avslutt",
+      Lock: "Lås",
+      UserPlaceholder: "Bruker",
+      PasswordPlaceholder: "Passord"
+      UsernameWarning: "Vennligst skriv inn brukernavn.",
+      PasswordWarning: "Vennligst skriv inn passord."
     }
   }
 };
