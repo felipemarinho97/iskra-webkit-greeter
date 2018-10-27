@@ -68,9 +68,22 @@ export default {
       Shutdown: "Avslutt",
       Lock: "Lås",
       UserPlaceholder: "Bruker",
-      PasswordPlaceholder: "Passord"
+      PasswordPlaceholder: "Passord",
       UsernameWarning: "Vennligst skriv inn brukernavn.",
       PasswordWarning: "Vennligst skriv inn passord."
+    }
+  },
+  lt: {
+    LoginScreen: {
+      Hibernate: "Pristabdyti",
+      Suspend: "Nutraukti",
+      Restart: "Restartuoti",
+      Shutdown: "Išjungti",
+      Lock: "Užrakinti",
+      UserPlaceholder: "Vartotojas",
+      PasswordPlaceholder: "Slaptažodis",
+      UsernameWarning: "Įveskite vartotojo vardą.",
+      PasswordWarning: "Įveskite slaptažodį."
     }
   }
 };
