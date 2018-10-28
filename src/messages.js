@@ -181,6 +181,19 @@ export default {
       PasswordWarning: "Per favore, inserisci la tua password."
     }
   },
+  sr: {
+    LoginScreen: {
+      Hibernate: "Хибернација",
+      Suspend: "Суспендуј",
+      Restart: "Рестартуј",
+      Shutdown: "Искључи",
+      Lock: "Закључаj",
+      UserPlaceholder: "Корисник",
+      PasswordPlaceholder: "Шифра",
+      UsernameWarning: "Молимо Вас да унесете ваше корисничко име.",
+      PasswordWarning: "Молимо Вас да унесете вашу шифру."
+    }
+  },
   ar: {
     LoginScreen: {
       Hibernate: "سبات",
