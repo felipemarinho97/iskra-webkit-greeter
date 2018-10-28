@@ -21,6 +21,7 @@ import it from 'react-intl/locale-data/it'; // Italian
 import fa from 'react-intl/locale-data/fa'; // Farsi
 import sr from 'react-intl/locale-data/sr'; // Serbian
 import ar from 'react-intl/locale-data/ar'; // Arabic
+import vi from 'react-intl/locale-data/vi'; // Vietnamese
 import zh from 'react-intl/locale-data/zh'; // Chinese
 // ... and so on
 
@@ -41,6 +42,7 @@ import 'moment/locale/it';
 import 'moment/locale/fa';
 import 'moment/locale/sr';
 import 'moment/locale/ar';
+import 'moment/locale/vi';
 import 'moment/locale/zh'; 
 
 const localeData = [
@@ -60,6 +62,7 @@ const localeData = [
   ...fa,
   ...sr,
   ...ar,
+  ...vi,
   ...zh,
 ];
 
