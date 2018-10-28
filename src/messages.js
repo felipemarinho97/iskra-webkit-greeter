@@ -207,5 +207,18 @@ export default {
       PasswordWarning: "الرجاء ادخال كلمة المرور."
     }
   },
+  vi: {
+    LoginScreen: {
+      Hibernate: "Chế độ ngủ đông",
+      Suspend: "Chế độ ngủ",
+      Restart: "Khởi động lại",
+      Shutdown: "Tắt nguồn",
+      Lock: "Khóa",
+      UserPlaceholder: "Người dùng",
+      PasswordPlaceholder: "Mật khẩu",
+      UsernameWarning: "Xin nhập tên người dùng.",
+      PasswordWarning: "Xin nhập mật khẩu."
+    }
+  },
 };
 
