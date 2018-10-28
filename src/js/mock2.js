@@ -1,4 +1,5 @@
 import wallpapers from "./../img/wallpapers";
+import locale2 from "locale2";
 
 if ((typeof window.lightdm === 'undefined')) {
   window.lightdm = {};
@@ -26,7 +27,7 @@ if ((typeof window.lightdm === 'undefined')) {
     alert("System Shutdown. Bye Bye");
   };
 
-  lightdm.languages = [{ code: "en_US", name: "English(US)", territory: "USA" }, { code: "en_UK", name: "English(UK)", territory: "UK" }];
+  lightdm.languages = [{ code: locale2, name: "User Locale", territory: "Country" }, { code: "en", name: "English(US)", territory: "USA" }, { code: "en_UK", name: "English(UK)", territory: "UK" }];
   lightdm.authenticate = () => { };
   lightdm.cancel_authentication = () => {}
   lightdm.respond = () => { };
