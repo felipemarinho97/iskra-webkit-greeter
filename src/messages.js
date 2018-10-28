@@ -88,7 +88,19 @@ export default {
       PasswordWarning: "Vennligst skriv inn passord."
     }
   },
-  
+  zh: {
+    LoginScreen: {
+      Hibernate: "休眠",
+      Suspend: "暂停",
+      Restart: "重启",
+      Shutdown: "关闭",
+      Lock: "锁",
+      UserPlaceholder: "用户名",
+      PasswordPlaceholder: "密码",
+      UsernameWarning: "请输入您的用户名.",
+      PasswordWarning: "请输入您的密码."
+    }
+  },  
   hi:{
     LoginScreen:{
       Hibernate: "seetanidra",
@@ -102,7 +114,6 @@ export default {
       PasswordWarning: "kripya apna password dale"
     }
   },
-
   lt: {
     LoginScreen: {
       Hibernate: "Pristabdyti",
@@ -192,6 +203,32 @@ export default {
       PasswordPlaceholder: "رمز عبور",
       UsernameWarning: "لطفا نام کاربری خود را وارد کنید.",
       PasswordWarning: "لطفا رمز عبور خود را وارد کنید."
+    }
+  },
+  sr: {
+    LoginScreen: {
+      Hibernate: "Хибернација",
+      Suspend: "Суспендуј",
+      Restart: "Рестартуј",
+      Shutdown: "Искључи",
+      Lock: "Закључаj",
+      UserPlaceholder: "Корисник",
+      PasswordPlaceholder: "Шифра",
+      UsernameWarning: "Молимо Вас да унесете ваше корисничко име.",
+      PasswordWarning: "Молимо Вас да унесете вашу шифру."
+    }
+  },
+  ar: {
+    LoginScreen: {
+      Hibernate: "سبات",
+      Suspend: "تعليق",
+      Restart: "أعد التشغيل",
+      Shutdown: "اغلق",
+      Lock: "قفل",
+      UserPlaceholder: "المستخدم",
+      PasswordPlaceholder: "كلمة المرور",
+      UsernameWarning: "الرجاء ادخال اسم المستخدم.",
+      PasswordWarning: "الرجاء ادخال كلمة المرور."
     }
   },
 };
