@@ -193,6 +193,19 @@ export default {
       UsernameWarning: "Молимо Вас да унесете ваше корисничко име.",
       PasswordWarning: "Молимо Вас да унесете вашу шифру."
     }
-  }
+  },
+  ar: {
+    LoginScreen: {
+      Hibernate: "سبات",
+      Suspend: "تعليق",
+      Restart: "أعد التشغيل",
+      Shutdown: "اغلق",
+      Lock: "قفل",
+      UserPlaceholder: "المستخدم",
+      PasswordPlaceholder: "كلمة المرور",
+      UsernameWarning: "الرجاء ادخال اسم المستخدم.",
+      PasswordWarning: "الرجاء ادخال كلمة المرور."
+    }
+  },
 };
 

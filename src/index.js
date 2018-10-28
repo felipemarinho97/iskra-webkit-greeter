@@ -19,6 +19,7 @@ import uk from 'react-intl/locale-data/uk'; // Ukrainian
 import ru from 'react-intl/locale-data/ru'; // Russian
 import it from 'react-intl/locale-data/it'; // Italian
 import sr from 'react-intl/locale-data/sr'; // Serbian
+import ar from 'react-intl/locale-data/ar'; // Arabic
 
 import { flattenMessages } from './js/utils'; // flatten messages util function in order to use nested js object for translated texts
 import messages from './messages';
@@ -35,6 +36,7 @@ import 'moment/locale/uk';
 import 'moment/locale/ru'; 
 import 'moment/locale/it';
 import 'moment/locale/sr';
+import 'moment/locale/ar';
 
 const localeData = [
   ...en, 
@@ -51,6 +53,7 @@ const localeData = [
   ...hi,
   ...it,
   ...sr,
+  ...ar,
 ];
 
 
