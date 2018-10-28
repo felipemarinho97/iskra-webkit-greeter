@@ -181,5 +181,18 @@ export default {
       PasswordWarning: "Per favore, inserisci la tua password."
     }
   },
+  mr: {
+    LoginScreen: {
+      Hibernate: "हायबरनेट",
+      Suspend: "निलंबित",
+      Restart: "पुन्हा सुरू करा",
+      Shutdown: "बंद",
+      Lock: "लॉक",
+      UserPlaceholder: "वापरकर्ता प्लेसहोल्डर",
+      PasswordPlaceholder: "पासवर्डप्लेसधारक",
+      UsernameWarning: "वापरकर्ता चेतावणी",
+      PasswordWarning: "पासवर्ड चेतावणी"
+    }
+  }
 };
 
