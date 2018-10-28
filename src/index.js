@@ -18,9 +18,12 @@ import tr from 'react-intl/locale-data/tr'; // Turkish
 import uk from 'react-intl/locale-data/uk'; // Ukrainian
 import ru from 'react-intl/locale-data/ru'; // Russian
 import it from 'react-intl/locale-data/it'; // Italian
+import fa from 'react-intl/locale-data/fa'; // Farsi
 import sr from 'react-intl/locale-data/sr'; // Serbian
 import ar from 'react-intl/locale-data/ar'; // Arabic
 import vi from 'react-intl/locale-data/vi'; // Vietnamese
+import zh from 'react-intl/locale-data/zh'; // Chinese
+// ... and so on
 
 import { flattenMessages } from './js/utils'; // flatten messages util function in order to use nested js object for translated texts
 import messages from './messages';
@@ -36,9 +39,11 @@ import 'moment/locale/tr';
 import 'moment/locale/uk'; 
 import 'moment/locale/ru'; 
 import 'moment/locale/it';
+import 'moment/locale/fa';
 import 'moment/locale/sr';
 import 'moment/locale/ar';
 import 'moment/locale/vi';
+import 'moment/locale/zh'; 
 
 const localeData = [
   ...en, 
@@ -54,9 +59,11 @@ const localeData = [
   ...ru,
   ...hi,
   ...it,
+  ...fa,
   ...sr,
   ...ar,
   ...vi,
+  ...zh,
 ];
 
 
