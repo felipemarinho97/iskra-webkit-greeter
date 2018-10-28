@@ -6,6 +6,7 @@ import registerServiceWorker from './registerServiceWorker';
 import { addLocaleData, IntlProvider } from 'react-intl';
 
 import en from 'react-intl/locale-data/en'; // English
+import pt from 'react-intl/locale-data/pt'; // Portuguease
 import de from 'react-intl/locale-data/de'; // German
 import fr from 'react-intl/locale-data/fr'; // French
 import es from 'react-intl/locale-data/es'; // Spanish
@@ -28,6 +29,7 @@ import zh from 'react-intl/locale-data/zh'; // Chinese
 import { flattenMessages } from './js/utils'; // flatten messages util function in order to use nested js object for translated texts
 import messages from './messages';
 
+import 'moment/locale/pt';  
 import 'moment/locale/es';  
 import 'moment/locale/de';  
 import 'moment/locale/fr'; 
@@ -43,10 +45,11 @@ import 'moment/locale/fa';
 import 'moment/locale/sr';
 import 'moment/locale/ar';
 import 'moment/locale/vi';
-import 'moment/locale/zh'; 
+import 'moment/locale/zh-cn'; 
 
 const localeData = [
   ...en, 
+  ...pt,
   ...de, 
   ...fr, 
   ...es, 

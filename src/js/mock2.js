@@ -1,6 +1,6 @@
 import wallpapers from "./../img/wallpapers";
 
-if ((typeof window.lightdm == 'undefined')) {
+if ((typeof window.lightdm === 'undefined')) {
   window.lightdm = {};
 
   let lightdm = window.lightdm;
@@ -35,7 +35,7 @@ if ((typeof window.lightdm == 'undefined')) {
 
 }
 
-if ((typeof window.theme_utils == 'undefined')) {
+if ((typeof window.theme_utils === 'undefined')) {
   window.theme_utils = {};
 
   let theme_utils = window.theme_utils;

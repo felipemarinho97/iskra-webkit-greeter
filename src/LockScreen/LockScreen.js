@@ -48,7 +48,7 @@ class LockScreen extends Component {
     let total = this.state.clickXlocation;
     if (this.isMousePressed())
       total = this.props.vpHeight;
-    let percentage = parseInt((100 * this.props.y)/ total);
+    let percentage = parseInt((100 * this.props.y)/ total, 10);
     if (percentage > 100)
       percentage = 100;
 
@@ -104,6 +104,8 @@ class LockScreen extends Component {
         this.setRelease(true)
         // Don't know why, but this is necessary to the release works.
         this.setState({ clickXlocation: 0 })
+        break;
+      default:
         break;
     }
   }
