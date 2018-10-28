@@ -192,6 +192,19 @@ export default {
       PasswordWarning: "Per favore, inserisci la tua password."
     }
   },
+  fa: {
+    LoginScreen: {
+      Hibernate: "حالت خواب",
+      Suspend: "متوقف کردن",
+      Restart: "شروع مجدد",
+      Shutdown: "خاموش کردن",
+      Lock: "قفل کردن",
+      UserPlaceholder: "نام کاربری",
+      PasswordPlaceholder: "رمز عبور",
+      UsernameWarning: "لطفا نام کاربری خود را وارد کنید.",
+      PasswordWarning: "لطفا رمز عبور خود را وارد کنید."
+    }
+  },
   sr: {
     LoginScreen: {
       Hibernate: "Хибернација",
