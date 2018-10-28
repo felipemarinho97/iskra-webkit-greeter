@@ -22,6 +22,7 @@ require('moment/locale/de');
 require('moment/locale/fr'); 
 require('moment/locale/sv');
 require('moment/locale/no'); 
+require('moment/locale/zh'); 
 
 addLocaleData([...en, ...de, ...fr, ...es, ...sv, ...no, ...zh]); // don't forget to add here and spread whatever language that was added ex: ...it 
 
