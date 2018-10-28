@@ -7,6 +7,7 @@
     "@types/react-intl": "^2.3.11",
     "antd": "^3.8.4",
     "babel-plugin-import": "^1.8.0",
+    "eslint": "^5.8.0",
     "getos": "^3.1.0",
     "moment": "^2.22.2",
     "react": "^16.4.2",
@@ -16,6 +17,7 @@
     "react-scripts": "1.1.5"
   },
   "scripts": {
+    "lint": "eslint \"src/**/*.js\"",
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test --env=jsdom",
