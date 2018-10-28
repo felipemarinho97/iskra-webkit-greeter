@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@types/react-intl": "^2.3.11",
     "antd": "^3.8.4",
     "babel-plugin-import": "^1.8.0",
     "getos": "^3.1.0",
