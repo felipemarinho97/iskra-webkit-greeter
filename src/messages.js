@@ -181,5 +181,18 @@ export default {
       PasswordWarning: "Per favore, inserisci la tua password."
     }
   },
+  ar: {
+    LoginScreen: {
+      Hibernate: "سبات",
+      Suspend: "تعليق",
+      Restart: "أعد التشغيل",
+      Shutdown: "اغلق",
+      Lock: "قفل",
+      UserPlaceholder: "المستخدم",
+      PasswordPlaceholder: "كلمة المرور",
+      UsernameWarning: "الرجاء ادخال اسم المستخدم.",
+      PasswordWarning: "الرجاء ادخال كلمة المرور."
+    }
+  },
 };
 
