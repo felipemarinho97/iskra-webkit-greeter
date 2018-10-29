@@ -100,9 +100,9 @@ export default {
       UsernameWarning: "请输入您的用户名.",
       PasswordWarning: "请输入您的密码."
     }
-  },  
-  hi:{
-    LoginScreen:{
+  },
+  hi: {
+    LoginScreen: {
       Hibernate: "seetanidra",
       Suspend: "nilambit",
       Restart: "punah aarambh",
@@ -244,7 +244,7 @@ export default {
       PasswordWarning: "Xin nhập mật khẩu."
     }
   },
-mr: {
+  mr: {
     LoginScreen: {
       Hibernate: "हायबरनेट",
       Suspend: "निलंबित",
