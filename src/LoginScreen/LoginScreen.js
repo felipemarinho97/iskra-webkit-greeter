@@ -28,6 +28,8 @@ class LoginScreen extends Component {
     };
 
     window.lightdm.authenticate();
+
+    this.handleKeyPress = this.handleKeyPress.bind(this);
   }
 
   componentWillMount() {
@@ -56,6 +58,12 @@ class LoginScreen extends Component {
     }
   }
 
+  focusLoginScreen() {
+    if (this.loginScreen) {
+      this.loginScreen.focus();
+    }
+  }
+
   submitPass(password) {
     if (password) {
       this.setState({ 
@@ -79,17 +87,20 @@ class LoginScreen extends Component {
     }
 
     this.setState({ username: event.target.value });
-
   }
 
   handleChangePass(event) {
     if (event.key === "Enter") {
       this.submitPass(this.state.password)
-    } else if (event.keyCode === 27) {
+    }
+
+    this.setState({ password: event.target.value });
+  }
+
+  handleKeyPress(event) {
+    if (event.keyCode === 27) { // ESC
       this.cancelAuthentication();
     }
-    this.setState({ password: event.target.value });
-
   }
 
   cancelAuthentication() {
@@ -102,14 +113,13 @@ class LoginScreen extends Component {
   startDefaultSession(count = 0) {
     if (window.lightdm.is_authenticated) {
       window.lightdm.start_session()
-    } else if (count < 5) {
+    } else if (count === 0 || (count < 5 && this.state.isInAuth)) {
       this.setState({ isInAuth: true })
+      this.focusLoginScreen();
       wait(this.startDefaultSession.bind(this), (2**count)*1000, count + 1)
-
     } else {
       this.cancelAuthentication();
     }
-
   }
 
   render() {
@@ -161,8 +171,11 @@ class LoginScreen extends Component {
 
     return (
       <div
+        tabIndex="0"
         style={{ backgroundImage: `url("${this.props.getWallpaper()}"), url(${this.props.getWallpaper()})`, backgroundSize: 'cover' }}
-        className="LoginScreen-container box blur-bgimage">
+        className="LoginScreen-container box blur-bgimage"
+        onKeyDown={this.handleKeyPress}
+        ref={loginScreen => { this.loginScreen = loginScreen }}>
         <div
           className="status-bar">
           <div className="status-bar-item-1  menu-p" style={{ textAlign: 'left' }}>{window.lightdm.hostname}</div>
