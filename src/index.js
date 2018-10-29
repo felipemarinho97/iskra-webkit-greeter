@@ -10,6 +10,7 @@ import pt from 'react-intl/locale-data/pt'; // Portuguease
 import de from 'react-intl/locale-data/de'; // German
 import fr from 'react-intl/locale-data/fr'; // French
 import es from 'react-intl/locale-data/es'; // Spanish
+import es from 'react-intl/locale-data/ca'; // Catalan
 import sv from 'react-intl/locale-data/sv'; // Swedish
 import no from 'react-intl/locale-data/no'; // Norwegian
 import hi from 'react-intl/locale-data/hi'; // Hindi
@@ -31,6 +32,7 @@ import messages from './messages';
 
 import 'moment/locale/pt';  
 import 'moment/locale/es';  
+import 'moment/locale/ca';  
 import 'moment/locale/de';  
 import 'moment/locale/fr'; 
 import 'moment/locale/sv';
@@ -53,6 +55,7 @@ const localeData = [
   ...de, 
   ...fr, 
   ...es, 
+  ...ca, 
   ...sv, 
   ...no, 
   ...lt,
