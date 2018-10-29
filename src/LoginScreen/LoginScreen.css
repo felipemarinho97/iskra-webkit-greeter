@@ -5,7 +5,10 @@
   left: 0;
   height: 100%;
   background-color: #8f3b3b;
+}
 
+.LoginScreen-container:focus {
+  outline: none;
 }
 
 .box {
