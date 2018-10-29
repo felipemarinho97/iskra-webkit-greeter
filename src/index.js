@@ -24,41 +24,42 @@ import sr from 'react-intl/locale-data/sr'; // Serbian
 import ar from 'react-intl/locale-data/ar'; // Arabic
 import vi from 'react-intl/locale-data/vi'; // Vietnamese
 import zh from 'react-intl/locale-data/zh'; // Chinese
-// ... and so on
+import mr from 'react-intl/locale-data/mr'; // Marathi
 
 import { flattenMessages } from './js/utils'; // flatten messages util function in order to use nested js object for translated texts
 import messages from './messages';
 
-import 'moment/locale/pt';  
-import 'moment/locale/es';  
-import 'moment/locale/de';  
-import 'moment/locale/fr'; 
+import 'moment/locale/pt';
+import 'moment/locale/es';
+import 'moment/locale/de';
+import 'moment/locale/fr';
 import 'moment/locale/sv';
-import "moment/locale/nb"; 
+import "moment/locale/nb";
 import 'moment/locale/lt';
-import 'moment/locale/pl'; 
+import 'moment/locale/pl';
 import 'moment/locale/tr';
-import 'moment/locale/uk'; 
-import 'moment/locale/ru'; 
+import 'moment/locale/uk';
+import 'moment/locale/ru';
 import 'moment/locale/it';
 import 'moment/locale/fa';
 import 'moment/locale/sr';
 import 'moment/locale/ar';
 import 'moment/locale/vi';
-import 'moment/locale/zh-cn'; 
+import 'moment/locale/zh-cn';
+import 'moment/locale/mr';
 
 const localeData = [
-  ...en, 
+  ...en,
   ...pt,
-  ...de, 
-  ...fr, 
-  ...es, 
-  ...sv, 
-  ...no, 
+  ...de,
+  ...fr,
+  ...es,
+  ...sv,
+  ...no,
   ...lt,
   ...pl,
-  ...tr, 
-  ...uk, 
+  ...tr,
+  ...uk,
   ...ru,
   ...hi,
   ...it,
@@ -67,6 +68,7 @@ const localeData = [
   ...ar,
   ...vi,
   ...zh,
+  ...mr
 ];
 
 
@@ -101,7 +103,7 @@ else if (messages[sAttemptedLocale.substring(0, 2)]) { // second-best case, the 
 
 ReactDOM.render(
   <IntlProvider locale={sLocalFinal} messages={flattenMessages(oMessages)}>
-    <App locale={sLocalFinal}/>
+    <App locale={sLocalFinal} />
   </IntlProvider>
   , document.getElementById('root')
 );
