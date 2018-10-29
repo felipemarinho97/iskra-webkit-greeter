@@ -88,7 +88,19 @@ export default {
       PasswordWarning: "Vennligst skriv inn passord."
     }
   },
-  
+  zh: {
+    LoginScreen: {
+      Hibernate: "休眠",
+      Suspend: "暂停",
+      Restart: "重启",
+      Shutdown: "关闭",
+      Lock: "锁",
+      UserPlaceholder: "用户名",
+      PasswordPlaceholder: "密码",
+      UsernameWarning: "请输入您的用户名.",
+      PasswordWarning: "请输入您的密码."
+    }
+  },  
   hi:{
     LoginScreen:{
       Hibernate: "seetanidra",
@@ -102,7 +114,6 @@ export default {
       PasswordWarning: "kripya apna password dale"
     }
   },
-
   lt: {
     LoginScreen: {
       Hibernate: "Pristabdyti",
@@ -181,7 +192,59 @@ export default {
       PasswordWarning: "Per favore, inserisci la tua password."
     }
   },
-  mr: {
+  fa: {
+    LoginScreen: {
+      Hibernate: "حالت خواب",
+      Suspend: "متوقف کردن",
+      Restart: "شروع مجدد",
+      Shutdown: "خاموش کردن",
+      Lock: "قفل کردن",
+      UserPlaceholder: "نام کاربری",
+      PasswordPlaceholder: "رمز عبور",
+      UsernameWarning: "لطفا نام کاربری خود را وارد کنید.",
+      PasswordWarning: "لطفا رمز عبور خود را وارد کنید."
+    }
+  },
+  sr: {
+    LoginScreen: {
+      Hibernate: "Хибернација",
+      Suspend: "Суспендуј",
+      Restart: "Рестартуј",
+      Shutdown: "Искључи",
+      Lock: "Закључаj",
+      UserPlaceholder: "Корисник",
+      PasswordPlaceholder: "Шифра",
+      UsernameWarning: "Молимо Вас да унесете ваше корисничко име.",
+      PasswordWarning: "Молимо Вас да унесете вашу шифру."
+    }
+  },
+  ar: {
+    LoginScreen: {
+      Hibernate: "سبات",
+      Suspend: "تعليق",
+      Restart: "أعد التشغيل",
+      Shutdown: "اغلق",
+      Lock: "قفل",
+      UserPlaceholder: "المستخدم",
+      PasswordPlaceholder: "كلمة المرور",
+      UsernameWarning: "الرجاء ادخال اسم المستخدم.",
+      PasswordWarning: "الرجاء ادخال كلمة المرور."
+    }
+  },
+  vi: {
+    LoginScreen: {
+      Hibernate: "Chế độ ngủ đông",
+      Suspend: "Chế độ ngủ",
+      Restart: "Khởi động lại",
+      Shutdown: "Tắt nguồn",
+      Lock: "Khóa",
+      UserPlaceholder: "Người dùng",
+      PasswordPlaceholder: "Mật khẩu",
+      UsernameWarning: "Xin nhập tên người dùng.",
+      PasswordWarning: "Xin nhập mật khẩu."
+    }
+  },
+mr: {
     LoginScreen: {
       Hibernate: "हायबरनेट",
       Suspend: "निलंबित",

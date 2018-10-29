@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+// eslint-disable-next-line 
 import mock from './js/mock2'
 import LockScreen from './LockScreen/LockScreen';
 import LoginScreen from './LoginScreen/LoginScreen';
@@ -9,7 +9,7 @@ const WALLPAPERS_DIR = "/usr/share/lightdm-webkit/themes/iskra-webkit-greeter/sr
 const WALLPAPERS_LIST = window.theme_utils.dirlist(WALLPAPERS_DIR);
 const WALLPAPER_INDEX = getRandomArbitrary(0, WALLPAPERS_LIST.length)
 function getRandomArbitrary(min, max) {
-  return parseInt(Math.random() * (max - min) + min);
+  return parseInt(Math.random() * (max - min) + min, 10);
 }
 
 function getRandomWallpaper() {

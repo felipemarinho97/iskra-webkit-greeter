@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 import { Form, Input, Icon, Avatar, Menu, Dropdown, Button } from 'antd';
 import './LoginScreen.css';
 import * as moment from 'moment';
-import background from '../img/wallpapers/adwaita-day.jpg';
 import { FormattedMessage } from 'react-intl';
-// import background from '/usr/share/backgrounds/gnome/ColdWarm.jpg';
 
 async function wait(fun, time, ...args) {
   function timeout(ms) {
@@ -125,6 +123,7 @@ class LoginScreen extends Component {
         prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
         placeholder={UserPlaceholder} type="text" value={this.state.username}/> }
     </FormattedMessage>
+
     const oPasswordInput = <FormattedMessage id="LoginScreen.PasswordPlaceholder">
       { PasswordPlaceholder => <Input
         autoFocus
@@ -135,27 +134,28 @@ class LoginScreen extends Component {
         prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}
         placeholder={PasswordPlaceholder} type="password" value={this.state.password} /> }
     </FormattedMessage>
+
     const menu = (
       <Menu>
         {window.lightdm.can_hibernate ?
           (<Menu.Item key="0">
-          <a href="#" onClick={() => window.lightdm.hibernate()}><Icon type="pause-circle-o" /> <FormattedMessage id="LoginScreen.Hibernate"/></a>
+          <a onClick={() => window.lightdm.hibernate()}><Icon type="pause-circle-o" /> <FormattedMessage id="LoginScreen.Hibernate"/></a>
         </Menu.Item>) : ""}
         {window.lightdm.can_suspend ?
           (<Menu.Item key="1">
-          <a href="#" onClick={() => window.lightdm.suspend()}><Icon type="minus-circle-o" /> <FormattedMessage id="LoginScreen.Suspend"/></a>
+          <a onClick={() => window.lightdm.suspend()}><Icon type="minus-circle-o" /> <FormattedMessage id="LoginScreen.Suspend"/></a>
         </Menu.Item>) : ""}
         {window.lightdm.can_restart ?
           (<Menu.Item key="2">
-          <a href="#" onClick={() => window.lightdm.restart()}><Icon type="reload" /> <FormattedMessage id="LoginScreen.Restart"/></a>
+          <a onClick={() => window.lightdm.restart()}><Icon type="reload" /> <FormattedMessage id="LoginScreen.Restart"/></a>
         </Menu.Item>) : ""}
         {window.lightdm.can_shutdown ?
           (<Menu.Item key="3">
-          <a href="#" onClick={() => window.lightdm.shutdown()}><Icon type="poweroff" /> <FormattedMessage id="LoginScreen.Shutdown"/></a>
+          <a onClick={() => window.lightdm.shutdown()}><Icon type="poweroff" /> <FormattedMessage id="LoginScreen.Shutdown"/></a>
         </Menu.Item>) : ""}
 
         <Menu.Divider />
-        <Menu.Item key="4"><a href="#" onClick={this.props.lock}><Icon type="lock" /> <FormattedMessage id="LoginScreen.Lock"/></a></Menu.Item>
+        <Menu.Item key="4"><a onClick={this.props.lock}><Icon type="lock" /> <FormattedMessage id="LoginScreen.Lock"/></a></Menu.Item>
       </Menu>
     )
 

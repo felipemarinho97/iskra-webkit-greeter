@@ -6,6 +6,7 @@ import registerServiceWorker from './registerServiceWorker';
 import { addLocaleData, IntlProvider } from 'react-intl';
 
 import en from 'react-intl/locale-data/en'; // English
+import pt from 'react-intl/locale-data/pt'; // Portuguease
 import de from 'react-intl/locale-data/de'; // German
 import fr from 'react-intl/locale-data/fr'; // French
 import es from 'react-intl/locale-data/es'; // Spanish
@@ -18,11 +19,17 @@ import tr from 'react-intl/locale-data/tr'; // Turkish
 import uk from 'react-intl/locale-data/uk'; // Ukrainian
 import ru from 'react-intl/locale-data/ru'; // Russian
 import it from 'react-intl/locale-data/it'; // Italian
-import mr from 'react-intl/locale-data/mr'; // Italian
+import fa from 'react-intl/locale-data/fa'; // Farsi
+import sr from 'react-intl/locale-data/sr'; // Serbian
+import ar from 'react-intl/locale-data/ar'; // Arabic
+import vi from 'react-intl/locale-data/vi'; // Vietnamese
+import zh from 'react-intl/locale-data/zh'; // Chinese
+import mr from 'react-intl/locale-data/mr'; // Marathi
 
 import { flattenMessages } from './js/utils'; // flatten messages util function in order to use nested js object for translated texts
 import messages from './messages';
 
+import 'moment/locale/pt';  
 import 'moment/locale/es';  
 import 'moment/locale/de';  
 import 'moment/locale/fr'; 
@@ -34,9 +41,15 @@ import 'moment/locale/tr';
 import 'moment/locale/uk'; 
 import 'moment/locale/ru'; 
 import 'moment/locale/it';
+import 'moment/locale/fa';
+import 'moment/locale/sr';
+import 'moment/locale/ar';
+import 'moment/locale/vi';
+import 'moment/locale/zh-cn'; 
 
 const localeData = [
   ...en, 
+  ...pt,
   ...de, 
   ...fr, 
   ...es, 
@@ -49,6 +62,11 @@ const localeData = [
   ...ru,
   ...hi,
   ...it,
+  ...fa,
+  ...sr,
+  ...ar,
+  ...vi,
+  ...zh,
   ...mr
 ];
 
