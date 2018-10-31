@@ -25,6 +25,7 @@ import ar from 'react-intl/locale-data/ar'; // Arabic
 import vi from 'react-intl/locale-data/vi'; // Vietnamese
 import zh from 'react-intl/locale-data/zh'; // Chinese
 import mr from 'react-intl/locale-data/mr'; // Marathi
+import ka from 'react-intl/locale-data/ka'; // Georgian
 
 import { flattenMessages } from './js/utils'; // flatten messages util function in order to use nested js object for translated texts
 import messages from './messages';
@@ -47,6 +48,7 @@ import 'moment/locale/ar';
 import 'moment/locale/vi';
 import 'moment/locale/zh-cn';
 import 'moment/locale/mr';
+import 'moment/locale/ka';
 
 const localeData = [
   ...en,
@@ -68,7 +70,8 @@ const localeData = [
   ...ar,
   ...vi,
   ...zh,
-  ...mr
+  ...mr,
+  ...ka
 ];
 
 addLocaleData(localeData); // don't forget to add here and spread whatever language that was added ex: ...it
