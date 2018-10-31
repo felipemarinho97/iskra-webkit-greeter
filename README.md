@@ -11,7 +11,7 @@ A beautiful, awesome themed login screen written on lightdm and the lightdm-webk
 
 Iskra, (from russian: И́скра, translated: spark) was the name of a political newspaper founded by Vladmir Lenin in 1900. _Iskra's_ motto was "From a spark a fire will flare up". The editorial line championed the battle for political freedom as well as the cause of socialist revolution.
 
-**Try it out [here, at the LIVE DEMO](https://felipemarinho97.github.io/iskra-webkit-greeter/demo).**
+**Try it out here, at the [LIVE DEMO](https://felipemarinho97.github.io/iskra-webkit-greeter/demo).**
 
 ![](iskra.gif)
 
