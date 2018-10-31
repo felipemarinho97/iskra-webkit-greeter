@@ -258,5 +258,18 @@ export default {
       UsernameWarning: 'वापरकर्ता चेतावणी',
       PasswordWarning: 'पासवर्ड चेतावणी'
     }
-  }
+  },
+  ka: {
+    LoginScreen: {
+      Hibernate: 'ჰიბერნეტირება',
+      Suspend: 'შეჩერება',
+      Restart: 'გადატვირთვა',
+      Shutdown: 'გამორთვა',
+      Lock: 'დაბლოკვა',
+      UserPlaceholder: 'მომხმარებელი',
+      PasswordPlaceholder: 'პაროლი',
+      UsernameWarning: 'გთხოვთ მიუთითეთ მომხმარებლის სახელი.',
+      PasswordWarning: 'გთხოვთ მიუთითეთ მომხმარებლის პაროლი.'
+    }
+  },
 };
