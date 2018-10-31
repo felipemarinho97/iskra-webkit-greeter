@@ -34,7 +34,7 @@ import 'moment/locale/es';
 import 'moment/locale/de';
 import 'moment/locale/fr';
 import 'moment/locale/sv';
-import "moment/locale/nb";
+import 'moment/locale/nb';
 import 'moment/locale/lt';
 import 'moment/locale/pl';
 import 'moment/locale/tr';
@@ -71,11 +71,10 @@ const localeData = [
   ...mr
 ];
 
-
-addLocaleData(localeData); // don't forget to add here and spread whatever language that was added ex: ...it 
+addLocaleData(localeData); // don't forget to add here and spread whatever language that was added ex: ...it
 
 // constants
-const sDefaultLocale = "en"; // could be changed
+const sDefaultLocale = 'en'; // could be changed
 
 // vars
 let sAttemptedLocale, sLocalFinal; // fallback if the following doesnt work
@@ -83,19 +82,20 @@ let oMessages;
 
 // sAttemptedLocale determination
 if (window.lightdm.languages.length > 0) {
-  sAttemptedLocale = window.lightdm.languages[0].code.split(".")[0]; // determine language from lightDM --> take 5 chaarcter ISO code (ex. en_US, es_ES)
+  sAttemptedLocale = window.lightdm.languages[0].code.split('.')[0]; // determine language from lightDM --> take 5 chaarcter ISO code (ex. en_US, es_ES)
 } else {
   sAttemptedLocale = sDefaultLocale; // fallback attempted locale
 }
 
 // messages determination
-if (messages[sAttemptedLocale]) { // optimum case: full locale is found in messages object, ex: en_US, en_UK, de_DE, de_AT etc.
+if (messages[sAttemptedLocale]) {
+  // optimum case: full locale is found in messages object, ex: en_US, en_UK, de_DE, de_AT etc.
   oMessages = messages[sAttemptedLocale];
   sLocalFinal = sAttemptedLocale;
-}
-else if (messages[sAttemptedLocale.substring(0, 2)]) { // second-best case, the langauge by itself is found as a key "en" or "de"
+} else if (messages[sAttemptedLocale.substring(0, 2)]) {
+  // second-best case, the langauge by itself is found as a key "en" or "de"
   oMessages = messages[sAttemptedLocale.substring(0, 2)]; // key found for sAttemptedLocale of language
-  sLocalFinal = sAttemptedLocale.substring(0, 2); // also need to update final locale for consistency 
+  sLocalFinal = sAttemptedLocale.substring(0, 2); // also need to update final locale for consistency
 } else {
   oMessages = messages[sDefaultLocale]; // key not found; use english: "en"
   sLocalFinal = sDefaultLocale; // also need to update locale
@@ -104,7 +104,7 @@ else if (messages[sAttemptedLocale.substring(0, 2)]) { // second-best case, the 
 ReactDOM.render(
   <IntlProvider locale={sLocalFinal} messages={flattenMessages(oMessages)}>
     <App locale={sLocalFinal} />
-  </IntlProvider>
-  , document.getElementById('root')
+  </IntlProvider>,
+  document.getElementById('root')
 );
 registerServiceWorker();

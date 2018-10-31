@@ -1,0 +1,6 @@
+{
+    "singleQuote": true,
+    "semicolons": true,
+    "tabWidth": 2,
+    "trailingCommas": "none"
+}
