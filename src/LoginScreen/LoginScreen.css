@@ -12,10 +12,10 @@
 }
 
 .box {
-    display: flex;
-    flex-wrap: wrap; /* Optional. only if you want the items to wrap */
-    justify-content: center; /* For horizontal alignment */
-    align-items: center; /* For vertical alignment */
+  display: flex;
+  flex-wrap: wrap; /* Optional. only if you want the items to wrap */
+  justify-content: center; /* For horizontal alignment */
+  align-items: center; /* For vertical alignment */
 }
 
 .login-input {
@@ -55,18 +55,18 @@
 }
 
 .status-bar-item-2 {
-  flex-grow: 2
+  flex-grow: 2;
 }
 .status-bar-item-1 {
-  flex-grow: 1
+  flex-grow: 1;
 }
 
 .power-dropdown {
   display: inline-block;
   transition: 0.3s;
-
 }
 
-.power-dropdown:hover, .power-dropdown:active {
+.power-dropdown:hover,
+.power-dropdown:active {
   background-color: #0003;
 }
