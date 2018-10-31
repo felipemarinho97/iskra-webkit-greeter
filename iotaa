@@ -1,0 +1,13 @@
+from time import sleep
+import RPi.GPIO as GPIO
+GPIO.setmode(GPIO.BOARD)
+button1=16
+i=0
+GPIO.setup(button1,GPIO.IN,pull_up_down=GPIO.PUD_UP)
+
+while(1):
+    if GPIO.input(button1)==0:
+        sleep(0.5)
+        if GPIO.input(button1)==1:
+            i=i+1
+            print(i)
