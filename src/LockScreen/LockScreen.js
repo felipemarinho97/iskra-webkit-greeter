@@ -6,6 +6,42 @@ import background from '../img/wallpapers/adwaita-day.jpg';
 if (window.moment === undefined) window.moment = moment;
 
 class LockScreen extends Component {
+	
+	var containerStart = document.getElementsByClassName("box Lock-container");
+	containerStart.addEventListener("touchstart", touchStartHandler, false);
+	
+	var containerEnd = document.getElementsByClassName("box Lock-container");
+	containerEnd.addEventListener("touchend", touchEndHandler, false);
+
+
+	var totalTouches = {};
+
+	function touchStartHandler(event) {
+		var touches = event.changedTouches;
+
+		for(var j = 0; j < touches.length; j++) {
+
+			totalTouches[ "$" + touches[j].identifier ] = {
+
+				identifier : touches[j].identifier,
+				yAxis : touches[j].yAxis
+			};
+		}
+	}
+
+	function touchEndHandler(event) {
+		var touches = event.changedTouches;
+
+		for(var j = 0; j < touches.length; j++) {
+
+			var touchDetailInfo = totalTouches[ "$" + touches[j].identifier ];
+			touchDetailInfo.dy = touches[j].yAxis - touchDetailInfo.yAxis;
+			
+			getMousePercentage(touchDetailInfo.dy);
+		}
+
+	}
+	
   constructor(props) {
     super(props);
     this.state = {
