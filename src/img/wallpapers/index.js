@@ -31,5 +31,5 @@ export default [
   bg13,
   bg14,
   bg15,
-  bg16,
-]
+  bg16
+];
