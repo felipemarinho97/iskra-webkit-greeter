@@ -87,9 +87,9 @@ sAttemptedLocale = sDefaultLocale; // fallback attempted locale
 
 // sAttemptedLocale determination
 if (window.lightdm.languages.length > 0) {
-  for(let language of window.lightdm.languages){
-    if(language.name === window.lightdm.language){
-      sAttemptedLocale = language.code.split('_')[0]; // determine language from lightDM --> take 5 chaarcter ISO code (ex. en_US, es_ES)
+  for (let language of window.lightdm.languages) {
+    if (language.name === window.lightdm.language) {
+      sAttemptedLocale = language.code.split('.')[0]; // determine language from lightDM --> take 5 chaarcter ISO code (ex. en_US, es_ES)
     }
   }
 }
