@@ -83,13 +83,16 @@ const sDefaultLocale = 'en'; // could be changed
 let sAttemptedLocale, sLocalFinal; // fallback if the following doesnt work
 let oMessages;
 
+sAttemptedLocale = sDefaultLocale; // fallback attempted locale
+
 // sAttemptedLocale determination
 if (window.lightdm.languages.length > 0) {
-  sAttemptedLocale = window.lightdm.languages[0].code.split('.')[0]; // determine language from lightDM --> take 5 chaarcter ISO code (ex. en_US, es_ES)
-} else {
-  sAttemptedLocale = sDefaultLocale; // fallback attempted locale
+  for(let language of window.lightdm.languages){
+    if(language.name === window.lightdm.language){
+      sAttemptedLocale = language.code.split('_')[0]; // determine language from lightDM --> take 5 chaarcter ISO code (ex. en_US, es_ES)
+    }
+  }
 }
-
 // messages determination
 if (messages[sAttemptedLocale]) {
   // optimum case: full locale is found in messages object, ex: en_US, en_UK, de_DE, de_AT etc.
