@@ -2,7 +2,7 @@
 
 # dependencies
 /node_modules
-/exemples
+/examples
 
 # testing
 /coverage
