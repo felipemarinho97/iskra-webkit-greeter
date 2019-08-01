@@ -1,5 +1,6 @@
 # Iskra
-###### ( lightdm-webkit-theme-iskra ) 
+
+###### ( lightdm-webkit-theme-iskra )
 
 <p align="center">
   <img src="https://cdn.iconscout.com/icon/free/png-128/fire-flame-tool-light-spark-33937.png">
@@ -16,6 +17,7 @@ Iskra, (from russian: И́скра, translated: spark) was the name of a politic
 ![](iskra.gif)
 
 ### Iskra LightDM Webkit2 Theme
+
 ## Features
 
 - A beautiful Lockscreen slider
@@ -34,6 +36,7 @@ Iskra, (from russian: И́скра, translated: spark) was the name of a politic
 
 - `lightdm`
 - `lightdm-webkit2-greeter`
+- `npm`
 
 Installation packages of `lightdm-webkit2-greeter` for Ubuntu, Arch (and other distros) can be found [here](https://github.com/Antergos/web-greeter).
 
@@ -42,8 +45,11 @@ Installation packages of `lightdm-webkit2-greeter` for Ubuntu, Arch (and other d
 Clone the theme to `/usr/share/lightdm-webkit/themes/iskra-webkit-greeter`:
 
 ```sh
-cd /usr/share/lightdm-webkit/themes
-git clone https://github.com/felipemarinho97/iskra-webkit-greeter.git iskra-webkit-greeter
+$ cd /usr/share/lightdm-webkit/themes
+$ git clone https://github.com/felipemarinho97/iskra-webkit-greeter.git iskra-webkit-greeter
+$ cd iskra-webkit-greeter
+$ npm install
+$ ./build.sh
 ```
 
 To select **iskra** as default theme just change the `webkit-theme` property in `/etc/lightdm/lightdm-webkit2-greeeter.conf` to `iskra-webkit-greeter`
