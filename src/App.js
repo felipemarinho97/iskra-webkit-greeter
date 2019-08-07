@@ -6,7 +6,7 @@ import LoginScreen from './LoginScreen/LoginScreen';
 import './App.css';
 
 const WALLPAPERS_DIR =
-  '/usr/share/lightdm-webkit/themes/iskra-webkit-greeter/src/img/wallpapers';
+  '/usr/share/lightdm-webkit/themes/iskra/src/img/wallpapers';
 const WALLPAPERS_LIST = window.theme_utils.dirlist(WALLPAPERS_DIR);
 const WALLPAPER_INDEX = getRandomArbitrary(0, WALLPAPERS_LIST.length);
 function getRandomArbitrary(min, max) {
